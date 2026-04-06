@@ -1,0 +1,1190 @@
+{
+  "lists": [
+    {
+      "slug": "accessibility-links-and-resources",
+      "label": "Accessibility Links and Resources",
+      "sourceUrl": "https://marconius.com/a11yLinks/",
+      "synthesizedAt": "2025-07-24T12:00:00Z",
+      "pedagogy": {
+        "chosenApproach": 2,
+        "approachName": "The Consultant's Casebook",
+        "philosophy": "Learning is most durable when it is anchored to consequential decisions the learner will actually face. Rather than presenting accessibility knowledge as a curriculum to complete, this approach frames every resource and concept as evidence the learner would need to handle a real consulting scenario — a client objection, an audit finding, an RFP question, a team workshop. The senior UX professional learns fastest not by reading about accessibility but by rehearsing the judgment calls that define credible consulting practice. Each session presents a scenario first, lets the learner reason from their existing expertise, then introduces resources as the evidence base that sharpens or corrects that reasoning. This produces the social currency and practical fluency the learner explicitly wants — not as abstract knowledge but as internalized patterns of professional judgment.",
+        "appStructure": {
+          "primaryOrganization": "The app is organized as a collection of named Cases, each representing a realistic consulting encounter the learner will face with a nonprofit client. Cases are grouped into four Practice Areas — Foundation Work, Technical Audits, Communications and Media, and Program Building — rather than following the curriculum module order. Each case has a difficulty tier (Entry, Working, Advanced) and a dominant consulting mode (Advising, Auditing, Teaching, Negotiating). The learner builds a Casebook that reflects their growing practice, not a course completion record.",
+          "sessionUnit": "One session equals one Case, estimated at 20–40 minutes. A Case has five phases: (1) Situation Brief — a one-paragraph client scenario with a specific decision or question the learner must respond to; (2) First Call — the learner records their initial response using their existing UX knowledge, explicitly surfacing what they know and what they are uncertain about; (3) Evidence Locker — two to four curated resources from the curriculum are revealed as the expert evidence base for this case, each introduced with its consulting-specific rationale rather than its general description; (4) Revised Position — the learner updates their response, annotating what changed and why; (5) Practice Pattern — a single memorable heuristic extracted from the case that can be retrieved under time pressure in a real client conversation.",
+          "retentionMechanisms": [
+            "Spaced retrieval prompts: seven and thirty days after completing a case, the learner receives a micro-prompt replaying only the Situation Brief and asking them to reconstruct their Practice Pattern without looking at notes, then reveals the pattern for self-scoring",
+            "Interleaved case sequencing: cases from different Practice Areas are mixed in the recommended queue so adjacent sessions require switching consulting modes, combating context-dependent forgetting",
+            "Uncertainty tagging at First Call: the learner explicitly marks which parts of their initial response are confident versus guessed, and the app tracks calibration over time — whether confidence correlates with accuracy after evidence review",
+            "Transferable heuristic library: each Practice Pattern feeds a personal reference card the learner can export and consult in real client situations, reinforcing that retention has a practical payoff",
+            "Contrastive pairs: cases are occasionally presented in pairs where two superficially similar client situations require meaningfully different responses, forcing discrimination rather than pattern matching alone",
+            "Synthesis prompts at Practice Area completion: after completing all cases in a Practice Area, a single integrative question asks the learner to write a two-sentence positioning statement for that domain as if responding to an RFP, consolidating the area's Practice Patterns into a transferable professional narrative",
+            "Cross-case linking: after each Evidence Locker reveal, the app surfaces one prior case whose evidence overlaps, asking the learner to identify the connection — building the associative network that supports flexible retrieval"
+          ],
+          "navigationModel": "The app opens to a Practice Area dashboard showing case cards organized by area and tier. A recommended queue surfaces the next highest-priority case based on a combination of: prerequisite cases completed, time since last retrieval prompt, and Practice Area balance. The learner can follow the queue or browse freely. Within a case, navigation is strictly linear through the five phases — the learner cannot skip to Evidence Locker without completing First Call, enforcing generative retrieval before exposure. Between cases, the learner can access their full Casebook to review completed cases, their heuristic library, and their calibration history. A global search allows finding cases or resources by topic keyword, supporting just-in-time lookup when a real client situation triggers a need to review a specific case.",
+          "progressIndicators": [
+            "Casebook fill rate: a visual representation of the learner's Casebook showing completed cases as filled cards and available cases as outlines, organized by Practice Area, giving a spatial sense of coverage without implying a single completion state",
+            "Calibration score: a running metric showing how closely the learner's self-assessed confidence at First Call correlates with their self-assessed accuracy after evidence review, trending toward expert-level calibration over time",
+            "Practice Pattern retrieval success rate: percentage of spaced retrieval prompts where the learner self-scored their reconstruction as accurate, shown per Practice Area to reveal relative strengths",
+            "Consulting mode coverage: a four-part indicator showing how many cases the learner has completed in each consulting mode — Advising, Auditing, Teaching, Negotiating — to surface gaps in professional range",
+            "Days since last session: a low-pressure streak indicator framed as 'last consulted' rather than a gamified streak, consistent with a professional tool rather than a learning app"
+          ]
+        },
+        "designDirectives": [
+          "Visual identity should read as a professional consulting tool, not an e-learning platform — use a typographic-first design with the aesthetic register of a well-designed legal or strategy brief, avoiding gamification iconography like badges, XP points, or progress bars styled as progress bars",
+          "The Situation Brief in each case must be written in first-person client voice — direct quotes from a fictional nonprofit stakeholder — so the learner viscerally inhabits the consulting encounter rather than reading about it abstractly",
+          "First Call input must be a free-text field with a visible word minimum of fifty words, paired with an explicit uncertainty toggle for each claim the learner makes — this structural friction prevents the learner from skipping genuine reasoning",
+          "Evidence Locker cards must display the consulting-specific rationale (whyThisWhyNow field) as the primary text, with the general resource description collapsed by default — the learner should encounter each resource through its consulting application first",
+          "Resources flagged with freshnessFlag true must display a prominent staleness notice in the Evidence Locker with specific guidance on what to verify before citing to a client, framed as professional due diligence rather than a warning",
+          "The Practice Pattern phase must constrain the learner to write a heuristic of thirty words or fewer, with a live word counter — this constraint forces distillation and produces a pattern that is actually retrievable under time pressure",
+          "Spaced retrieval prompts must arrive as a dedicated session type that looks identical to the Situation Brief phase but explicitly states 'You completed this case N days ago — reconstruct your Practice Pattern' before revealing any content, preserving the retrieval attempt as a distinct cognitive act",
+          "The heuristic library must be exportable as a print-optimized single-page PDF formatted as a reference card — this gives the artifact real-world utility and reinforces that the learning produces a tangible professional asset",
+          "Contrastive case pairs must be visually linked on the Practice Area dashboard with a subtle connector element so the learner is aware they will eventually encounter both and can anticipate the comparison",
+          "Cross-case links surfaced after Evidence Locker reveal must require the learner to type or select the connection before the prior case is revealed — the connection must be generated, not recognized, to produce durable associative encoding",
+          "The calibration history view must show individual case data points as a scatter plot of confidence versus accuracy, with a diagonal line representing perfect calibration — this gives the senior professional the data-oriented feedback they are accustomed to from their enterprise UX background",
+          "Notable gaps from the curriculum must appear in the Practice Area dashboard as greyed-out case card silhouettes labeled with the gap topic and a brief rationale for why they are not yet covered — this is honest about curriculum limits and frames the gaps as future professional development opportunities rather than failures",
+          "Mobile layout must be fully functional because the learner may want to review a Practice Pattern or complete a retrieval prompt between client meetings — the five-phase case flow must collapse gracefully to a single-column vertical scroll",
+          "Color palette must pass WCAG 2.1 AA contrast at every text size, and the app must be keyboard navigable throughout — the product teaching accessibility must itself be accessible, and this should be called out explicitly in an app-level 'about this product' note as a demonstration of the practice"
+        ]
+      },
+      "modules": [
+        {
+          "moduleId": "module-1",
+          "moduleTitle": "Foundations: why accessibility matters and who it serves",
+          "moduleDescription": "Establishes the conceptual, ethical, and business case for accessibility before touching any implementation detail. This module builds the vocabulary and mental models you need to speak credibly with nonprofit clients, boards, and funders — people who need the 'why' before the 'how'.",
+          "estimatedReadTime": "2–3 hours",
+          "resources": [
+            {
+              "url": "https://www.w3.org/WAI/fundamentals/",
+              "label": "Web Accessibility Initiative – Accessibility Fundamentals",
+              "description": "A comprehensive overview from W3C WAI providing starting resources for learning web accessibility, including real-world user perspectives, essential components, accessibility principles, research findings, and free online courses.",
+              "whyThisWhyNow": "W3C WAI is the authoritative source your nonprofit clients will cite in RFPs and grant language, so grounding your practice here gives you the shared vocabulary that opens doors.",
+              "resourceType": "reference",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "Introduction to Web Accessibility",
+                "How people with disabilities use the web",
+                "Essential components of web accessibility",
+                "Accessibility principles and requirements",
+                "AI and accessibility"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                "https://www.w3.org/"
+              ]
+            },
+            {
+              "url": "https://a11y-101.com",
+              "label": "A11y 101",
+              "description": "An introductory web accessibility guide for both designers and developers covering foundational knowledge on assistive technology, design principles, inclusive design, and the legal and business case for accessibility.",
+              "whyThisWhyNow": "As someone onboarding nonprofit clients with mixed technical literacy, this is the resource you can hand off directly — it covers the business and legal case in plain language without requiring a development background.",
+              "resourceType": "tutorial",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "Web accessibility fundamentals",
+                "Legal and business case for accessibility",
+                "Inclusive design principles",
+                "Assistive technology considerations"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/fundamentals/",
+                "https://www.lflegal.com"
+              ]
+            },
+            {
+              "url": "https://webaim.org",
+              "label": "WebAIM – Web Accessibility In Mind",
+              "description": "A university-based nonprofit providing comprehensive web accessibility expertise through training, consulting, evaluation services, and free tools, serving organizations seeking to create accessible digital content.",
+              "whyThisWhyNow": "WebAIM publishes the annual accessibility survey data (WebAIM Million) that carries real social currency in the a11y community — citing it positions you as current rather than theoretical.",
+              "resourceType": "community",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "Web accessibility training and consulting",
+                "WCAG standards and compliance",
+                "Digital accessibility salary data",
+                "Alt text and semantic HTML"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://wave.webaim.org",
+                "https://webaim.org/resources/contrastchecker/"
+              ]
+            },
+            {
+              "url": "https://www.w3.org/",
+              "label": "W3C – World Wide Web Consortium",
+              "description": "The international standards body that develops specifications and guidelines for an accessible, internationalized, private, and secure web, bringing together member organizations, staff, and the public.",
+              "whyThisWhyNow": "Understanding W3C's role as the standards body gives you the organizational map to navigate where WCAG, ARIA, and future specs come from — essential when advising clients on long-term compliance strategies.",
+              "resourceType": "standard",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "Web standards development",
+                "Accessibility standards",
+                "Internationalization",
+                "Privacy and security guidelines"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/fundamentals/",
+                "https://www.w3.org/WAI/standards-guidelines/wcag/"
+              ]
+            },
+            {
+              "url": "https://www.lflegal.com",
+              "label": "Law Office of Lainey Feingold – Digital Accessibility Ethics",
+              "description": "Lainey Feingold's professional website covering disability rights law, digital accessibility compliance, and Structured Negotiation — a collaborative dispute resolution approach that avoids litigation.",
+              "whyThisWhyNow": "Nonprofit clients operating under ADA Title II regulations need a consultant who understands Structured Negotiation as a low-conflict compliance path — Feingold's work is the primary reference for that approach.",
+              "resourceType": "reference",
+              "audienceLevel": "advanced",
+              "isFree": true,
+              "keyTopics": [
+                "Structured Negotiation",
+                "Digital accessibility law and compliance",
+                "Disability rights and advocacy",
+                "ADA Title II regulations",
+                "Accessible procurement"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://a11y-101.com",
+                "https://www.w3.org/WAI/standards-guidelines/wcag/"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A nonprofit board member tells you, 'We serve everyone equally — we don't have disabled users, so accessibility isn't a priority for us.' Which response best demonstrates consulting-level command of the foundational case for accessibility?",
+              "options": [
+                "Cite the ADA Title II regulations and explain that legal compliance is mandatory regardless of perceived user demographics",
+                "Challenge the assumption about their user base by connecting the situational, temporary, and permanent disability model to their actual audience, then layer in the legal and mission-alignment arguments",
+                "Show them WCAG standards and explain that accessible sites also rank better in search engines",
+                "Agree to defer accessibility work until a disabled user formally requests accommodation"
+              ],
+              "correctIndex": 1,
+              "explanation": "Correcting the flawed premise — that disability is a fixed, visible category — with the permanent/temporary/situational model reframes accessibility as universal benefit and aligns with the nonprofit's own mission before introducing legal risk, which is a more persuasive sequence for skeptical boards."
+            },
+            {
+              "question": "A nonprofit is drafting an RFP for a new donor portal and asks you whether to include accessibility requirements in vendor procurement language. They're worried it will reduce the number of bidders. How do you advise them?",
+              "options": [
+                "Recommend omitting accessibility requirements to maximize vendor competition, then audit the chosen vendor's output post-launch",
+                "Advise them to add a brief WCAG 2.1 AA mention as a checkbox item at the end of technical requirements",
+                "Recommend including specific WCAG 2.1 AA conformance requirements and an Accessibility Conformance Report request, explaining that accessible procurement protects them from downstream legal liability and aligns with structured negotiation best practices",
+                "Suggest they wait until ADA Title II enforcement guidance is finalized before adding procurement language"
+              ],
+              "correctIndex": 2,
+              "explanation": "Accessible procurement language is a proactive legal and mission-alignment strategy; requiring conformance evidence (like a VPAT) from vendors shifts liability appropriately and is consistent with structured negotiation principles covered in this module."
+            },
+            {
+              "question": "A program officer at a foundation asks you to justify including accessibility consulting fees in a digital transformation grant budget. Which framing is most likely to succeed with a nonprofit funder?",
+              "options": [
+                "Frame accessibility as a technical debt item that will save money on future redesigns",
+                "Frame it as an ethical obligation under disability rights law that the organization must meet",
+                "Frame it as expanding the organization's reach to disabled communities they currently exclude, directly advancing the foundation's equity goals and reducing the organization's legal exposure simultaneously",
+                "Frame it as a one-time compliance cost that will be completed before the grant period ends"
+              ],
+              "correctIndex": 2,
+              "explanation": "Funders respond to mission impact and equity arguments first; connecting accessibility to expanded reach for underserved communities aligns the budget line with the foundation's own strategic goals, making the business and ethical case simultaneously."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-2",
+          "moduleTitle": "WCAG in depth: understanding the standard you'll live by",
+          "moduleDescription": "Provides a layered, progressive reading of WCAG — from plain-language summary to full technical specification — so you can fluently discuss compliance levels with clients, interpret audit findings, and write defensible recommendations. Given your design systems background, the four-principle structure will map naturally onto component-level thinking.",
+          "estimatedReadTime": "3–4 hours",
+          "resources": [
+            {
+              "url": "https://www.w3.org/WAI/standards-guidelines/wcag/glance/",
+              "label": "WCAG 2 at a Glance",
+              "description": "A paraphrased plain-language summary of WCAG 2.1 and 2.2 organized around four principles: Perceivable, Operable, Understandable, and Robust.",
+              "whyThisWhyNow": "This is the one-page version you reference when explaining compliance requirements to a nonprofit's board or grant writer — read it first to anchor the full spec in plain terms.",
+              "resourceType": "reference",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "WCAG 2.1 and 2.2 guidelines",
+                "Perceivable principle",
+                "Operable principle",
+                "Understandable principle",
+                "Robust principle"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                "https://www.a11yproject.com/checklist/"
+              ]
+            },
+            {
+              "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+              "label": "WCAG 2 Overview – W3C WAI",
+              "description": "The authoritative overview of Web Content Accessibility Guidelines covering WCAG 2.0, 2.1, and 2.2 with success criteria at three conformance levels and supporting technical materials.",
+              "whyThisWhyNow": "You need command of the specific version differences (2.1 vs 2.2) because clients under recent ADA Title II rulemaking are being held to 2.1 AA as a legal baseline — knowing the delta matters for gap analysis.",
+              "resourceType": "standard",
+              "audienceLevel": "advanced",
+              "isFree": true,
+              "keyTopics": [
+                "WCAG 2.0, 2.1, and 2.2 versions",
+                "Four principles: perceivable, operable, understandable, robust",
+                "Success criteria at three levels: A, AA, AAA",
+                "ISO/IEC 40500 standardization",
+                "Backwards compatibility"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/standards-guidelines/wcag/glance/",
+                "https://www.a11yproject.com/checklist/",
+                "https://adrianroselli.com/posts"
+              ]
+            },
+            {
+              "url": "https://www.a11yproject.com/checklist/",
+              "label": "A11y Project Checklist",
+              "description": "A comprehensive, task-based accessibility checklist grounded in WCAG 2.2, covering 18 categories of web accessibility concerns with specific, testable success criteria.",
+              "whyThisWhyNow": "This checklist translates WCAG's abstract success criteria into concrete, auditable line items — exactly the format you need when scoping a consulting engagement or training a nonprofit's internal team.",
+              "resourceType": "checklist",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "WCAG compliance (Levels A, AA, AAA)",
+                "Semantic HTML and landmarks",
+                "Keyboard navigation and focus management",
+                "Image alt text",
+                "Heading structure",
+                "Form labels",
+                "Color contrast",
+                "Mobile accessibility"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                "https://wave.webaim.org",
+                "https://webaim.org/resources/contrastchecker/"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "Your audit of a nonprofit's donation form finds that error messages appear only in red text without any other indicator, and focus order skips the error summary entirely. A developer asks which WCAG success criteria are implicated. Which answer correctly maps the findings to WCAG principles and criteria?",
+              "options": [
+                "Both issues fall under Operable: the focus order problem is 2.4.3 Focus Order and the color-only issue is 2.1.1 Keyboard",
+                "The color-only error indicator violates Perceivable 1.4.1 Use of Color; the focus order problem violates Operable 2.4.3 Focus Order",
+                "Both issues fall under Understandable: 3.3.1 Error Identification covers the color problem and 3.3.2 Labels or Instructions covers focus order",
+                "The color issue violates Robust 4.1.3 Status Messages and the focus order issue violates Understandable 3.3.4"
+              ],
+              "correctIndex": 1,
+              "explanation": "Color-only error signaling maps to Perceivable 1.4.1, which prohibits using color as the sole visual means of conveying information; programmatic focus order failures map to Operable 2.4.3, which requires meaningful focus sequence."
+            },
+            {
+              "question": "A client asks whether they need to meet WCAG 2.2 or whether WCAG 2.1 AA is still sufficient for legal defensibility. How do you advise them?",
+              "options": [
+                "Tell them WCAG 2.2 supersedes 2.1 entirely and they must retest everything against the new version immediately",
+                "Explain that WCAG 2.2 is backwards compatible with 2.1 — meeting 2.2 AA means meeting 2.1 AA — and that while most current legal standards reference 2.1 AA, proactively addressing 2.2's new criteria (like 2.4.11 Focus Appearance) demonstrates due diligence and future-proofs their compliance posture",
+                "Advise them to wait until regulators formally adopt WCAG 2.2 before investing in any remediation beyond 2.1 AA",
+                "Recommend targeting WCAG 2.0 AA since it is the ISO/IEC 40500 standard and therefore the most legally defensible baseline"
+              ],
+              "correctIndex": 1,
+              "explanation": "WCAG 2.2 is backwards compatible, so it's a superset of 2.1 AA conformance; advising proactive adoption of 2.2 criteria is strategically sound because it anticipates regulatory updates while the backwards compatibility means no prior 2.1 AA work is wasted."
+            },
+            {
+              "question": "During a workshop with a nonprofit's content team, a writer asks why AAA criteria are not required for their site. How do you explain the three-level structure in a way that builds practical judgment rather than just compliance-minimum thinking?",
+              "options": [
+                "Explain that AAA criteria are aspirational extras that only large tech companies attempt and that nonprofits should focus entirely on A and AA",
+                "Explain that AAA conformance is not required as a general policy because some AAA criteria cannot be satisfied for all content types, but specific AAA criteria — like plain language (3.1.5) or extended audio description (1.2.7) — may be highly achievable and strategically valuable for a nonprofit serving cognitively diverse audiences",
+                "Tell the team that AAA is irrelevant until they pass a WCAG 2.1 AA audit, at which point they can revisit",
+                "Explain that AAA criteria are reserved for government and healthcare sites under Section 508 and do not apply to nonprofits"
+              ],
+              "correctIndex": 1,
+              "explanation": "The nuanced answer — that AAA isn't globally required but specific AAA criteria may be both achievable and mission-aligned — builds the judgment that compliance floors shouldn't cap ambition, which is the kind of strategic framing that distinguishes a consultant from a checkbox auditor."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-3",
+          "moduleTitle": "Semantic HTML and ARIA: building accessible structure",
+          "moduleDescription": "Covers the technical substrate of accessible web experiences — semantic HTML, ARIA roles and attributes, and how browsers expose these to assistive technology. For a consultant advising development teams at resource-constrained nonprofits, understanding the difference between 'use semantic HTML first' and 'add ARIA when necessary' is a force-multiplier for accurate, efficient remediation guidance.",
+          "estimatedReadTime": "4–6 hours",
+          "resources": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+              "label": "HTML: HyperText Markup Language – MDN",
+              "description": "MDN's comprehensive HTML reference and tutorial hub covering elements, attributes, semantic markup, forms, media elements, and web standards best practices.",
+              "whyThisWhyNow": "MDN is the daily reference tool of the developers you'll be advising — knowing its structure lets you point directly to authoritative documentation rather than paraphrasing in your deliverables.",
+              "resourceType": "reference",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "HTML elements and semantic markup",
+                "Forms and form validation",
+                "Content structure and accessibility",
+                "Media elements",
+                "Web standards"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/ARIA/apg/",
+                "https://html5accessibility.com",
+                "https://validator.w3.org"
+              ]
+            },
+            {
+              "url": "https://html5accessibility.com",
+              "label": "HTML5 Accessibility – Browser support state",
+              "description": "A reference tool that tests and reports on HTML5 feature accessibility support across major browsers, evaluating keyboard accessibility, platform API mapping, and whether ARIA workarounds are needed.",
+              "whyThisWhyNow": "When a nonprofit dev team asks whether a native HTML element is 'safe to use,' this gives you cross-browser evidence rather than opinion — critical for defensible technical recommendations.",
+              "resourceType": "reference",
+              "audienceLevel": "intermediate",
+              "isFree": true,
+              "keyTopics": [
+                "HTML5 semantic elements",
+                "Cross-browser accessibility support scoring",
+                "Platform accessibility API mapping",
+                "Keyboard accessibility testing",
+                "Form controls"
+              ],
+              "freshnessFlag": true,
+              "freshnessNote": "Editor's draft last updated August 2020; browser support landscape has shifted significantly since then — verify against a11ysupport.io for current data.",
+              "relatedUrls": [
+                "https://a11ysupport.io",
+                "https://www.w3.org/WAI/ARIA/apg/",
+                "https://developer.mozilla.org/en-US/docs/Web/HTML"
+              ]
+            },
+            {
+              "url": "https://www.w3.org/WAI/ARIA/apg/",
+              "label": "ARIA Authoring Practices Guide (APG)",
+              "description": "The W3C's comprehensive guide teaching developers how to use ARIA roles, states, and properties to create accessible web components, with design patterns, functional examples, and keyboard support guidance.",
+              "whyThisWhyNow": "The APG's design patterns are the canonical reference for evaluating whether a custom widget is correctly implemented — knowing it cold lets you audit interactive components with authority.",
+              "resourceType": "reference",
+              "audienceLevel": "intermediate",
+              "isFree": true,
+              "keyTopics": [
+                "ARIA roles, states, and properties",
+                "Design patterns and widget implementation",
+                "Keyboard support and navigation",
+                "ARIA landmark regions",
+                "Accessible names and descriptions"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                "https://a11ysupport.io",
+                "https://www.powermapper.com/tests/screen-readers/aria/"
+              ]
+            },
+            {
+              "url": "https://a11ysupport.io",
+              "label": "Accessibility Support – AT compatibility database",
+              "description": "A community-driven database testing how ARIA roles, attributes, and HTML elements perform across real screen readers, voice control software, and browser combinations.",
+              "whyThisWhyNow": "The gap between 'technically correct ARIA' and 'actually works in JAWS with Chrome' is where real user failures live — this database is your evidence base for that gap when advising dev teams.",
+              "resourceType": "reference",
+              "audienceLevel": "intermediate",
+              "isFree": true,
+              "keyTopics": [
+                "ARIA roles and attributes support",
+                "Screen reader compatibility testing",
+                "Voice control and speech recognition support",
+                "Real-world assistive tech compatibility data"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/ARIA/apg/",
+                "https://www.powermapper.com/tests/screen-readers/aria/",
+                "https://html5accessibility.com"
+              ]
+            },
+            {
+              "url": "https://www.powermapper.com/tests/screen-readers/aria/",
+              "label": "WAI-ARIA screen reader compatibility – PowerMapper",
+              "description": "Comprehensive compatibility testing data for WAI-ARIA attributes and roles across major screen readers and browsers, with reliability percentages and historical trends since 2014.",
+              "whyThisWhyNow": "The longitudinal trend data from 2014–2025 lets you show clients that AT support has meaningfully improved — useful for countering 'we'll add accessibility later when it's more stable' objections.",
+              "resourceType": "reference",
+              "audienceLevel": "advanced",
+              "isFree": true,
+              "keyTopics": [
+                "ARIA role support",
+                "Screen reader compatibility (NVDA, JAWS, VoiceOver)",
+                "Reliability trends 2014–2025",
+                "Expected failures and correct usage patterns"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://a11ysupport.io",
+                "https://www.w3.org/WAI/ARIA/apg/"
+              ]
+            },
+            {
+              "url": "https://validator.w3.org",
+              "label": "W3C Markup Validation Service",
+              "description": "A free tool that checks markup validity of web documents in HTML, XHTML, SMIL, and other formats via URI, file upload, or direct input.",
+              "whyThisWhyNow": "Valid markup is the lowest-cost accessibility win — this tool lets you quickly demonstrate baseline HTML hygiene issues in a client's existing site during a discovery engagement.",
+              "resourceType": "tool",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "HTML/XHTML markup validation",
+                "Error reporting",
+                "Document outline generation",
+                "Character encoding detection"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://developer.mozilla.org/en-US/docs/Web/HTML",
+                "https://wave.webaim.org"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A developer at a resource-constrained nonprofit has built a custom dropdown menu using nested <div> elements with click handlers and ARIA roles added afterward. They ask if this is acceptable. What is your most accurate and practically useful response?",
+              "options": [
+                "Approve it, since ARIA roles make any HTML element semantically equivalent to its native counterpart",
+                "Reject it entirely and require a native <select> element in all cases",
+                "Explain that the first rule of ARIA is to use native HTML first — a native <select> or <details>/<summary> pattern carries built-in keyboard behavior and accessibility API mapping that a <div>-based widget must manually replicate across all assistive technologies, creating significant maintenance burden and reliability risk for a team without dedicated accessibility resources",
+                "Advise them to add tabindex='0' and an aria-label to the outer div and consider the issue resolved"
+              ],
+              "correctIndex": 2,
+              "explanation": "The 'first rule of ARIA' principle — prefer native semantics — is the force-multiplier for resource-constrained teams because native elements provide keyboard support and AT compatibility by default, while ARIA-on-divs requires reproducing all of that behavior manually and testing across NVDA, JAWS, and VoiceOver combinations."
+            },
+            {
+              "question": "An audit of a nonprofit's site reveals that their main navigation, search form, and footer are not marked with ARIA landmark regions, and heading levels skip from H1 to H4 throughout page content. A developer argues these are minor cosmetic issues. How do you characterize the actual impact?",
+              "options": [
+                "Agree that these are low-priority visual issues that can be deferred to the next redesign cycle",
+                "Explain that missing landmarks deprive screen reader users of the ability to navigate the page by region — a primary navigation strategy — and that illogical heading hierarchy breaks the document outline that assistive technology users rely on to scan and understand page structure, making these structural failures with significant usability impact",
+                "Flag only the heading structure issue as a WCAG violation and note that ARIA landmarks are best practice but not required for AA conformance",
+                "Recommend adding a skip-navigation link as a sufficient substitute for landmark regions"
+              ],
+              "correctIndex": 1,
+              "explanation": "Landmark regions and logical heading structure are primary navigation mechanisms for screen reader users, not cosmetic enhancements — their absence forces linear reading of entire pages and is a genuine barrier that a consultant must characterize accurately to motivate remediation."
+            },
+            {
+              "question": "You're reviewing a nonprofit's volunteer application form and notice that required field indicators use only an asterisk (*) in the label text, with no programmatic association between the asterisk's meaning and the field, and no aria-required or required attribute on the inputs. A developer says screen readers will 'read the asterisk anyway.' How do you respond?",
+              "options": [
+                "Agree — if the asterisk is in the visible label text, screen readers will announce it and users will understand its meaning",
+                "Explain that while some screen readers may announce the asterisk character, its meaning is conveyed only visually through convention; the required state must be programmatically exposed via aria-required or the native required attribute so assistive technologies can surface it through accessibility APIs independently of how label text is worded",
+                "Recommend replacing the asterisk with the word 'required' in all label text, which fully resolves the programmatic requirement",
+                "Flag this only as a WCAG 3.3.2 Labels or Instructions issue and note it does not affect the accessible name computation"
+              ],
+              "correctIndex": 1,
+              "explanation": "Programmatic exposure of required state via aria-required or native required attributes is necessary because it surfaces the field's state through the accessibility API — enabling AT to announce it in context-appropriate ways — rather than relying on users to interpret a visual convention embedded in label text."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-4",
+          "moduleTitle": "Auditing and testing: tools for evaluation and evidence",
+          "moduleDescription": "Equips you with the practical toolchain for conducting accessibility audits — automated scanning, contrast checking, and manual inspection — and frames each tool's appropriate scope and limitations. For a consulting practice, the ability to produce credible, reproducible audit evidence is a core service differentiator.",
+          "estimatedReadTime": "3–4 hours",
+          "resources": [
+            {
+              "url": "https://wave.webaim.org",
+              "label": "WAVE Web Accessibility Evaluation Tools",
+              "description": "A comprehensive suite of web accessibility evaluation tools including browser extensions, subscription APIs, and stand-alone testing engines for evaluating WCAG compliance and identifying accessibility issues.",
+              "whyThisWhyNow": "WAVE's visual overlay approach makes accessibility issues immediately legible to non-technical nonprofit stakeholders — use it in client presentations to make the case for remediation investment.",
+              "resourceType": "tool",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "WCAG compliance evaluation",
+                "Browser extensions",
+                "Accessibility impact scoring",
+                "Continuous integration testing",
+                "Human evaluation facilitation"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://webaim.org",
+                "https://webaim.org/resources/contrastchecker/",
+                "https://www.ssa.gov/accessibility/andi/help/install.html"
+              ]
+            },
+            {
+              "url": "https://www.ssa.gov/accessibility/andi/help/install.html",
+              "label": "ANDI – Accessibility Testing Tool (SSA)",
+              "description": "A free browser bookmarklet from the Social Security Administration that automates accessibility testing, reveals screen reader output for interactive elements, and checks Section 508 compliance.",
+              "whyThisWhyNow": "Federal nonprofits and NGOs receiving government funding often fall under Section 508 obligations — ANDI is the SSA's own tool, giving your recommendations federal-agency credibility in those contexts.",
+              "resourceType": "tool",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "Automated accessibility testing",
+                "Section 508 compliance",
+                "WCAG standards",
+                "Accessible name computation",
+                "Screen reader compatibility"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://wave.webaim.org",
+                "https://webaim.org/resources/contrastchecker/"
+              ]
+            },
+            {
+              "url": "https://webaim.org/resources/contrastchecker/",
+              "label": "WebAIM Color Contrast Checker",
+              "description": "An interactive tool calculating contrast ratios between foreground and background colors with immediate WCAG 2.0/2.1 AA and AAA pass/fail results for normal text, large text, and UI components.",
+              "whyThisWhyNow": "Color contrast is typically the highest-frequency finding in any audit and the easiest win to explain to a design team — this is your daily-use tool for that conversation.",
+              "resourceType": "tool",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "Contrast ratio calculation",
+                "WCAG 2.0 and 2.1 compliance levels (AA and AAA)",
+                "Normal and large text contrast",
+                "Graphical objects and UI component contrast"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://colourcontrast.cc",
+                "https://wave.webaim.org",
+                "https://www.a11yproject.com/checklist/"
+              ]
+            },
+            {
+              "url": "https://colourcontrast.cc",
+              "label": "Colour Contrast Checker – ColorContrast.cc",
+              "description": "An interactive web tool evaluating color contrast ratios against WCAG standards with hex, RGB, and HSL input, real-time preview, and AA/AAA pass/fail results.",
+              "whyThisWhyNow": "When working with a nonprofit's brand team, the RGB/HSL slider interface here is more approachable than hex-only tools — useful for live color exploration during design reviews.",
+              "resourceType": "tool",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "WCAG contrast standards (AA, AAA)",
+                "Color contrast ratio calculation",
+                "Hex, RGB, and HSL color input",
+                "Real-time contrast preview"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://webaim.org/resources/contrastchecker/",
+                "https://www.a11yproject.com/checklist/"
+              ]
+            },
+            {
+              "url": "https://w3c.github.io/webvtt.js/parser.html",
+              "label": "Live WebVTT Validator",
+              "description": "An interactive browser-based validator for WebVTT files used in video captions, descriptions, and metadata, providing real-time parsing and error detection with line-level feedback.",
+              "whyThisWhyNow": "Nonprofits with video-heavy outreach content (advocacy, training, donor communications) frequently have malformed caption files — this quick validator surfaces those issues before they become audit findings.",
+              "resourceType": "tool",
+              "audienceLevel": "intermediate",
+              "isFree": true,
+              "keyTopics": [
+                "WebVTT file format validation",
+                "Video captions and subtitles",
+                "Audio descriptions for video",
+                "Real-time parsing and error detection"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://meryl.net/captioned-videos-complete-guide/"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A nonprofit client asks you to run an automated accessibility scan and provide the results as their official audit. You know automated tools catch roughly 30–40% of WCAG issues. How do you structure your response and your engagement?",
+              "options": [
+                "Run the automated scan and deliver the report, noting in a footnote that manual testing was not included",
+                "Decline to use automated tools since they produce false positives that undermine client trust",
+                "Explain that automated scanning is a necessary but insufficient audit component — it efficiently surfaces deterministic issues like missing alt attributes and contrast ratios, but cannot evaluate focus order logic, screen reader announcement quality, or cognitive usability — and propose a methodology that combines automated scanning for breadth with structured manual and assistive technology testing for depth",
+                "Recommend the client purchase a continuous integration accessibility testing subscription as a substitute for a formal audit"
+              ],
+              "correctIndex": 2,
+              "explanation": "Positioning automated tools accurately — as efficient triage for deterministic issues, not as a complete audit — protects your professional credibility and produces more defensible findings, which is the core service differentiator described in this module."
+            },
+            {
+              "question": "During an audit, your contrast checker shows a nonprofit's brand blue on white at a 3.8:1 ratio. The designer argues it passes because it's used for large decorative headings. How do you evaluate this claim against WCAG standards?",
+              "options": [
+                "Accept the argument — decorative text is explicitly exempt from all contrast requirements under WCAG 1.4.3",
+                "Evaluate whether the text meets WCAG's definition of 'large text' (18pt regular or 14pt bold) and is purely decorative with no informational purpose; if it is large text conveying content, 3:1 is the correct AA threshold and 3.8:1 passes, but if it is normal-weight text below the large-text threshold, it fails the 4.5:1 AA requirement",
+                "Require the client to meet the AAA threshold of 7:1 for all headings regardless of size, since headings are high-importance content",
+                "Flag it as a failure because WCAG contrast requirements apply uniformly to all text regardless of size or decorative intent"
+              ],
+              "correctIndex": 1,
+              "explanation": "WCAG 1.4.3 applies different contrast thresholds based on text size — 3:1 for large text, 4.5:1 for normal text — and exempts genuinely decorative text with no informational function; accurate application of these distinctions requires knowing both the pixel/point size definitions and the decorative exemption criteria."
+            },
+            {
+              "question": "A nonprofit's video team asks you to review their new program impact video before publication. The video has open captions burned in, but no audio description. The content director says the visuals are 'self-explanatory.' How do you assess and advise?",
+              "options": [
+                "Approve the video since open captions satisfy WCAG 1.2.2 and self-explanatory visuals are an accepted exemption",
+                "Evaluate whether the video's visual content conveys information not available in the audio track; if it does — such as on-screen text, significant action, or data visualizations — WCAG 1.2.5 requires audio description at AA conformance, and 'self-explanatory' is not a defined exemption; recommend a descriptive audio track or extended description",
+                "Flag only the open caption format as a failure since WCAG requires closed captions to allow user control, and defer audio description as a AAA requirement",
+                "Advise the team that audio description is only required for live video content under WCAG 1.2.4 and that pre-recorded video is exempt at AA level"
+              ],
+              "correctIndex": 1,
+              "explanation": "WCAG 1.2.5 requires audio description for pre-recorded video at AA level when visual content conveys information absent from the audio; 'self-explanatory' is a subjective claim that must be tested against the standard's actual criterion, not accepted as an exemption."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-5",
+          "moduleTitle": "Media accessibility: captions, alt text, and audio description",
+          "moduleDescription": "Focuses on accessible media — images, video, and audio description — through both technical practice and creative reframing. Nonprofit and NGO communications are often image- and video-rich, making this module directly applicable to real client deliverables and a strong differentiator for a consultant who can speak to both compliance and craft.",
+          "estimatedReadTime": "2–3 hours",
+          "resources": [
+            {
+              "url": "https://alt-text-as-poetry.net",
+              "label": "Alt Text as Poetry",
+              "description": "A collaborative project by disabled artists reframing alt text as creative practice, offering a free workbook with writing exercises and workshops exploring thoughtful image description for blind and low-vision users.",
+              "whyThisWhyNow": "Moving nonprofit communications teams from perfunctory alt text to genuinely descriptive writing requires a reframe, not just a rule — this resource provides the creative on-ramp that compliance checklists cannot.",
+              "resourceType": "tutorial",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "Alt text as accessibility and poetry",
+                "Image description techniques",
+                "Word economy and language attention",
+                "Disability justice and accessibility culture",
+                "Audio description"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://meryl.net/captioned-videos-complete-guide/",
+                "https://www.a11yproject.com/checklist/"
+              ]
+            },
+            {
+              "url": "https://meryl.net/captioned-videos-complete-guide/",
+              "label": "The Complete Guide to Captioning Videos – Meryl Evans",
+              "description": "A comprehensive guide to video captioning by a deaf accessibility expert, covering why captions matter, 10 best practices, caption statistics, and an extensive directory of captioning tools and services.",
+              "whyThisWhyNow": "The statistic that 86% of caption users are not deaf or hard of hearing is exactly the kind of data-backed business case argument that moves nonprofit leadership from 'nice to have' to 'must have'.",
+              "resourceType": "reference",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "Why captions matter: reach, SEO, brand awareness, legal liability",
+                "10 guidelines for accessible captions",
+                "Open vs. closed captions",
+                "Captioning software directory",
+                "Live event captioning"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://w3c.github.io/webvtt.js/parser.html",
+                "https://alt-text-as-poetry.net"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A nonprofit communications manager shows you their image library policy: all photos get alt text that reads 'Photo of [subject].' You need to coach them toward better practice without overwhelming a non-technical team. What principle do you apply and how do you frame it?",
+              "options": [
+                "Approve the policy since any alt text is better than missing alt text, and the team can refine it later",
+                "Replace the policy with a requirement that all alt text must be under 125 characters to comply with screen reader limits",
+                "Reframe alt text as purposeful image description: the goal is to transfer the informational or emotional content the image conveys in context, not to label its existence — 'Photo of' is redundant because screen readers already announce images; instead, coach the team to ask what a sighted reader would take from the image and write that, or to use empty alt text for purely decorative images",
+                "Require the team to add both alt text and a visible caption for every image to ensure redundancy across all user types"
+              ],
+              "correctIndex": 2,
+              "explanation": "Effective alt text transfers the image's meaning in context, not its existence as a photo; coaching around the question 'what would a sighted user take from this?' builds durable judgment, and clarifying the decorative image (empty alt) convention prevents over-description that burdens screen reader users."
+            },
+            {
+              "question": "A nonprofit client wants to host a live fundraising event streamed online and asks whether captions are required and, if so, what approach you recommend. How do you advise them?",
+              "options": [
+                "Advise that captions are only required for pre-recorded video under WCAG 1.2.2 and that live events have no legal or WCAG obligation",
+                "Recommend they add auto-generated captions from their streaming platform and note that accuracy is a secondary concern for live events",
+                "Explain that WCAG 1.2.4 requires captions for live audio content in synchronized media at AA conformance, and that auto-generated captions from streaming platforms typically fall short of the accuracy, speaker identification, and synchronization quality required; recommend professional live captioning (CART) or a vetted captioning service, noting the brand, legal liability, and reach arguments that make this a sound investment beyond pure compliance",
+                "Advise them that live captioning is a AAA requirement and therefore out of scope for a standard accessibility consultation"
+              ],
+              "correctIndex": 2,
+              "explanation": "WCAG 1.2.4 (Captions Live) is an AA success criterion, not AAA; live auto-captions rarely meet accuracy standards for professional communications, and framing the recommendation around reach, brand, and liability — not just compliance — is the consulting-level approach."
+            },
+            {
+              "question": "A nonprofit's graphic designer argues that adding audio description to their advocacy videos will 'ruin the pacing and feel of the content.' How do you address the creative tension while maintaining the accessibility requirement?",
+              "options": [
+                "Agree to waive audio description to preserve creative integrity, since WCAG allows exceptions for artistic works",
+                "Require verbatim compliance with WCAG 1.2.5 and inform the designer that aesthetic concerns are secondary to legal requirements",
+                "Acknowledge the creative tension as legitimate, then introduce extended audio description (WCAG 1.2.7) as an option that preserves the original cut while adding a separate accessible version, and explore whether thoughtful description written as craft — not afterthought narration — can be integrated into planning rather than retrofitted, which often produces better creative and accessible outcomes simultaneously",
+                "Recommend the client add a text transcript as a substitute for audio description since transcripts convey equivalent information with no impact on video pacing"
+              ],
+              "correctIndex": 2,
+              "explanation": "Extended audio description (pausing video to insert description) is a WCAG 1.2.7 mechanism that resolves the pacing objection, and reframing description as a craft decision made during production — rather than a retrofit — converts an adversarial dynamic into a creative collaboration."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-6",
+          "moduleTitle": "Mobile and cross-platform accessibility",
+          "moduleDescription": "Addresses accessibility on native mobile platforms — React Native and Flutter — alongside mobile-specific WCAG considerations. As nonprofits increasingly deliver services and communications through mobile-first experiences, consultants who can evaluate and guide mobile accessibility work have a meaningful competitive advantage.",
+          "estimatedReadTime": "2–3 hours",
+          "resources": [
+            {
+              "url": "https://reactnative.dev/docs/accessibility",
+              "label": "React Native Accessibility Documentation",
+              "description": "Comprehensive reference documentation for implementing accessibility in React Native apps across Android and iOS, covering 25+ accessibility properties and APIs for screen reader support and assistive technology integration.",
+              "whyThisWhyNow": "React Native is the dominant cross-platform mobile stack for resource-constrained nonprofits — knowing its accessibility API surface lets you audit or spec mobile apps without a separate native specialist.",
+              "resourceType": "reference",
+              "audienceLevel": "intermediate",
+              "isFree": true,
+              "keyTopics": [
+                "accessible property",
+                "accessibilityLabel",
+                "accessibilityRole",
+                "accessibilityState",
+                "aria-* properties",
+                "iOS VoiceOver",
+                "Android TalkBack",
+                "accessibilityLiveRegion"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://docs.flutter.dev/ui/accessibility-and-internationalization/accessibility",
+                "https://www.w3.org/WAI/standards-guidelines/wcag/"
+              ]
+            },
+            {
+              "url": "https://docs.flutter.dev/ui/accessibility-and-internationalization/accessibility",
+              "label": "Flutter Accessibility Documentation",
+              "description": "Flutter's official accessibility documentation covering core principles, regulations, framework support, assistive technologies, UI design patterns, testing, and an accessibility release checklist.",
+              "whyThisWhyNow": "Flutter adoption is growing among NGOs building for global, multilingual audiences — this documentation lets you evaluate Flutter projects with the same rigor you apply to web work.",
+              "resourceType": "reference",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "Accessibility regulations and standards",
+                "Assistive technologies and screen reader support",
+                "Accessibility testing and validation",
+                "Accessibility release checklist",
+                "Universal access principles"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://reactnative.dev/docs/accessibility",
+                "https://www.a11yproject.com/checklist/"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A nonprofit development team is building a React Native mobile app for client intake services and asks whether adding accessibilityLabel to every touchable component is sufficient for VoiceOver and TalkBack support. How do you respond?",
+              "options": [
+                "Confirm that accessibilityLabel on all touchable elements is the primary requirement and will satisfy both iOS VoiceOver and Android TalkBack",
+                "Explain that accessibilityLabel provides the accessible name but is insufficient alone — accessibilityRole is required to communicate what type of element it is (button, link, header), accessibilityState must convey dynamic states like selected or disabled, and together these three properties map to what screen readers need to announce interactions meaningfully to users",
+                "Advise the team to use aria-label instead of accessibilityLabel since React Native now maps aria-* properties directly and they are more standards-aligned",
+                "Recommend focusing on iOS VoiceOver support first since Android TalkBack users represent a smaller audience for nonprofit client populations"
+              ],
+              "correctIndex": 1,
+              "explanation": "Accessible name (accessibilityLabel), role (accessibilityRole), and state (accessibilityState) form a triad that together enable screen readers to announce what something is, what it's called, and what its current condition is — omitting role or state leaves users without critical interaction context."
+            },
+            {
+              "question": "During a mobile accessibility review, you discover that a nonprofit's app updates a status message ('Your form has been submitted') dynamically without moving focus to it, and VoiceOver users are missing the confirmation entirely. What is the correct remediation?",
+              "options": [
+                "Move programmatic focus to the status message element after submission so VoiceOver announces it as part of the focus change",
+                "Display the status message as a modal dialog that traps focus until dismissed",
+                "Implement accessibilityLiveRegion with an appropriate politeness level so that VoiceOver and TalkBack automatically announce the dynamic content change without requiring a focus move, which preserves user context and avoids disruptive interruption",
+                "Add a visible confirmation screen that replaces the form view entirely so sighted and screen reader users receive the same treatment"
+              ],
+              "correctIndex": 2,
+              "explanation": "accessibilityLiveRegion is the correct pattern for dynamic status messages that don't warrant a focus change — it signals to assistive technologies that content has updated and should be announced without disrupting the user's current location or task context."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-7",
+          "moduleTitle": "Community voices and practitioner discourse",
+          "moduleDescription": "Connects you to the active practitioner community where accessibility norms, best practices, and professional reputation are shaped. For someone building a consulting practice, being fluent in current debates and knowing the recognized experts is as important as technical knowledge — this is how you develop the social currency the learner profile explicitly values.",
+          "estimatedReadTime": "Ongoing — bookmark and read regularly",
+          "resources": [
+            {
+              "url": "https://www.smashingmagazine.com/category/accessibility/",
+              "label": "Smashing Magazine – Accessibility Articles",
+              "description": "A curated collection of 161 articles on web accessibility covering inclusive design, assistive technologies, WCAG compliance, accessible UX research, and design tools from practitioners across the field.",
+              "whyThisWhyNow": "Smashing Magazine bridges design and development in exactly the way your UX background positions you — it's where the practical pattern-level thinking lives that you can translate directly into client recommendations.",
+              "resourceType": "blog",
+              "audienceLevel": "mixed",
+              "isFree": true,
+              "keyTopics": [
+                "Inclusive design patterns",
+                "Accessible UX research",
+                "Design for deaf and hard of hearing users",
+                "WCAG compliance",
+                "Accessibility in Figma",
+                "CAPTCHA accessibility"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://adrianroselli.com/posts",
+                "https://www.w3.org/WAI/ARIA/apg/"
+              ]
+            },
+            {
+              "url": "https://adrianroselli.com/posts",
+              "label": "Adrian Roselli – Blog",
+              "description": "Adrian Roselli's blog featuring in-depth, often critical articles on ARIA implementation, WCAG compliance, screen reader support, accessibility overlays, and practical accessibility barriers.",
+              "whyThisWhyNow": "Roselli is one of the most-cited practitioners in the a11y community and his posts regularly debunk vendor claims — reading him keeps your consulting advice from being captured by overlay tool marketing or other industry hype.",
+              "resourceType": "blog",
+              "audienceLevel": "advanced",
+              "isFree": true,
+              "keyTopics": [
+                "ARIA misuse and proper implementation",
+                "WCAG compliance",
+                "Accessibility overlays and vendor criticism",
+                "Screen reader support",
+                "Keyboard shortcuts",
+                "Accessibility Conformance Reports (VPAT)"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/ARIA/apg/",
+                "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                "https://www.smashingmagazine.com/category/accessibility/"
+              ]
+            },
+            {
+              "url": "https://tetralogical.com",
+              "label": "TetraLogical",
+              "description": "An accessibility consultancy specializing in inclusive design, offering assessments, strategy, development support, and team training across web and app accessibility.",
+              "whyThisWhyNow": "TetraLogical publishes practitioner-grade technical articles and their team (including Bruce Lawson and Léonie Watson) is active in standards work — following their output positions you in the same professional tier.",
+              "resourceType": "community",
+              "audienceLevel": "mixed",
+              "isFree": false,
+              "keyTopics": [
+                "Accessibility consulting and assessments",
+                "Inclusive UX design",
+                "Team training",
+                "Web and app accessibility",
+                "Accessibility strategy"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://webaim.org",
+                "https://adrianroselli.com/posts"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A nonprofit client asks you to evaluate a vendor's proposal that includes an accessibility overlay widget as their remediation solution, citing it as a cost-effective alternative to a full audit and redesign. How do you advise them?",
+              "options": [
+                "Recommend the overlay as an acceptable interim solution while a longer-term remediation plan is developed, since it demonstrates good-faith accessibility effort",
+                "Advise the client that accessibility overlays have been publicly criticized by the practitioner community — including open letters signed by hundreds of accessibility professionals — for failing to reliably fix underlying code issues, potentially introducing new barriers, and not constituting legal safe harbor; recommend declining the proposal and investing in source-code remediation instead",
+                "Ask the vendor to provide a third-party WCAG 2.1 AA audit report for their overlay product, and approve it if they can demonstrate AA conformance",
+                "Accept the overlay only if the vendor contractually guarantees WCAG 2.1 AA conformance and indemnifies the client against ADA complaints"
+              ],
+              "correctIndex": 1,
+              "explanation": "The practitioner community has reached strong consensus — documented in open letters and community discourse — that overlays do not reliably remediate underlying accessibility barriers and can introduce new ones; advising clients away from overlays is a core competency signal in the consulting community."
+            },
+            {
+              "question": "A nonprofit's UX researcher asks for your input on making their user research process more inclusive of disabled participants. You want to draw on current practitioner discourse. Which approach best reflects emerging best practice in accessible UX research?",
+              "options": [
+                "Recommend recruiting disabled participants only for accessibility-specific usability studies, keeping mainstream research studies focused on the primary user base",
+                "Suggest adding a disability demographic question to screeners and offering a $10 accessibility supplement to standard participant incentives",
+                "Draw on accessible UX research practice by recommending that disability inclusion be embedded in all research recruitment — not siloed to accessibility studies — that research materials and sessions be designed for accessibility from the start (not adapted on request), that compensation be equitable and account for additional time assistive technology use may require, and that researchers examine their own assumptions about 'normal' use patterns",
+                "Advise them to partner with a disability organization to recruit participants only when research topics directly concern disability experience"
+              ],
+              "correctIndex": 2,
+              "explanation": "Current practitioner discourse frames disability inclusion in UX research as a systemic design decision — not a recruitment add-on — requiring accessible materials, equitable compensation, and researchers who understand assistive technology workflows and avoid deficit-model assumptions."
+            },
+            {
+              "question": "During a consulting proposal, a nonprofit program director asks you to explain what an Accessibility Conformance Report (VPAT) is and when they should require one. How do you respond in a way that demonstrates fluency with current consulting practice?",
+              "options": [
+                "Explain that a VPAT is a government-only document required under Section 508 and is not relevant to nonprofit digital procurement",
+                "Describe a VPAT as a vendor's self-assessment of how their product maps to WCAG and Section 508 criteria, and recommend requiring it from any software or platform vendor as part of procurement — noting that a completed VPAT does not guarantee conformance but creates documented accountability and gives the nonprofit a basis for negotiation and remediation expectations",
+                "Recommend the nonprofit request VPATs only from vendors serving federal contracts, since Section 508 obligations do not extend to private nonprofit procurement",
+                "Explain that VPATs are standardized third-party audit reports that certify WCAG 2.1 AA conformance and can be relied upon as legal safe harbor for procurement decisions"
+              ],
+              "correctIndex": 1,
+              "explanation": "A VPAT is a vendor self-assessment, not a third-party certification, and fluent consultants know to communicate both its value as a procurement accountability tool and its limitation as an unverified document — helping clients use it as a starting point for vendor conversations rather than a compliance guarantee."
+            }
+          ]
+        },
+        {
+          "moduleId": "module-8",
+          "moduleTitle": "Formal training and certification pathways",
+          "moduleDescription": "Maps out structured learning paths toward professional certification, particularly IAAP credentials that carry weight with enterprise and institutional clients. For a consultant building credibility with nonprofits and NGOs, CPACC or WAS certification provides an external signal of expertise that shortens the trust-building process with new clients.",
+          "estimatedReadTime": "Self-paced — 20–80 hours depending on certification track",
+          "resources": [
+            {
+              "url": "http://webworkshop.club",
+              "label": "Web Workshop – Accessible Web Development (Dimensions Project)",
+              "description": "A structured open-source web development curriculum designed for students who are blind, covering HTML, CSS, and JavaScript with accessibility-first pedagogy including prerecorded lectures and tactile diagram support.",
+              "whyThisWhyNow": "The pedagogy of teaching web development to blind students directly embodies the 'design for the edges, benefit everyone' principle — studying how this curriculum is structured sharpens your own accessibility-first teaching approach for client workshops.",
+              "resourceType": "course",
+              "audienceLevel": "beginner",
+              "isFree": true,
+              "keyTopics": [
+                "HTML syntax and semantic elements",
+                "CSS and JavaScript fundamentals",
+                "Web accessibility and usability principles",
+                "Accessible pedagogy for blind learners",
+                "ARIA and interactivity"
+              ],
+              "freshnessFlag": true,
+              "freshnessNote": "Most recent course iteration was August–October 2020; curriculum materials may still be valid but the live cohort model appears inactive — verify availability before referencing to clients.",
+              "relatedUrls": [
+                "https://www.dequeuniversity.com",
+                "https://www.w3.org/WAI/fundamentals/"
+              ]
+            },
+            {
+              "url": "https://www.dequeuniversity.com",
+              "label": "Deque University",
+              "description": "A comprehensive digital accessibility training platform offering self-paced online courses, instructor-led training, and reference materials covering web, document, and mobile accessibility, with IAAP certification preparation and scholarships for people with disabilities.",
+              "whyThisWhyNow": "Deque University's CPACC and WAS preparation courses are the industry-standard certification pathway — completing or recommending them signals professional-grade commitment to accessibility that differentiates your practice in nonprofit RFP processes.",
+              "resourceType": "course",
+              "audienceLevel": "mixed",
+              "isFree": false,
+              "keyTopics": [
+                "IAAP CPACC certification preparation",
+                "Web accessibility training",
+                "ARIA JavaScript patterns",
+                "Screen reader guides",
+                "Document and mobile accessibility",
+                "Instructor-led workshops"
+              ],
+              "freshnessFlag": false,
+              "freshnessNote": null,
+              "relatedUrls": [
+                "https://www.w3.org/WAI/fundamentals/",
+                "https://webaim.org",
+                "https://www.w3.org/WAI/standards-guidelines/wcag/"
+              ]
+            }
+          ],
+          "quizQuestions": [
+            {
+              "question": "A prospective nonprofit client asks why they should hire you over a generalist UX consultant who also 'does accessibility.' You are preparing to sit for the IAAP CPACC exam. How do you articulate the value of formal certification in this context?",
+              "options": [
+                "Explain that CPACC certification means you have passed a government-recognized licensing exam and are legally qualified to conduct ADA compliance audits",
+                "Acknowledge that certification alone does not differentiate expertise, and focus the conversation entirely on your portfolio of past accessibility work",
+                "Explain that IAAP CPACC certification is an internationally recognized credential that validates a structured knowledge base spanning disability models, accessibility standards, and assistive technology — providing the client with an external signal of expertise that reduces their due diligence burden and signals you operate within a professional community with defined ethical and knowledge standards",
+                "Position CPACC as primarily valuable for enterprise clients and explain that smaller nonprofits should rely on your portfolio and references rather than credentials"
+              ],
+              "correctIndex": 2,
+              "explanation": "IAAP credentials function as trust-shortcutting signals in client relationships — they externalize expertise validation in a field where self-proclaimed expertise is common, which is particularly valuable when building a new practice where portfolio depth is still developing."
+            },
+            {
+              "question": "A nonprofit asks you to design a half-day accessibility training workshop for their mixed-role team of developers, designers, and content editors. Drawing on accessible pedagogy principles from your certification preparation, how do you structure it?",
+              "options": [
+                "Deliver a single unified curriculum covering WCAG criteria, then split into role breakouts for the final 30 minutes",
+                "Structure the session around role-specific compliance checklists — one for developers, one for designers, one for editors — with no cross-role content since each group has distinct responsibilities",
+                "Open with shared foundational concepts — disability models, the cost of retrofitting, and how their roles interconnect in the accessibility supply chain — then branch into role-specific application sessions where each group practices skills relevant to their actual outputs, closing with a cross-role exercise that simulates a real project handoff to reinforce systemic thinking",
+                "Focus the full session on screen reader demonstration so all roles develop empathy through direct AT experience before learning any technical content"
+              ],
+              "correctIndex": 2,
+              "explanation": "Effective accessibility training for mixed teams requires shared mental models before role-specific skills, and closing with a cross-role exercise reinforces that accessibility is a systemic responsibility — not a handoff checkpoint — which is the durable behavior change a consulting engagement needs to produce."
+            }
+          ]
+        }
+      ],
+      "crossCuttingThemes": [
+        "WCAG 2.x as the shared compliance language across web, mobile, and document contexts",
+        "The gap between automated testing and real-world assistive technology behavior",
+        "Business and legal case for accessibility as a consulting entry point",
+        "Semantic HTML as the foundation that reduces ARIA complexity",
+        "Color contrast as the highest-frequency, most explainable audit finding",
+        "Disability justice framing alongside technical compliance",
+        "Community-validated norms versus vendor claims (especially re: overlays)",
+        "Nonprofit/NGO context: resource constraints, video-heavy comms, ADA Title II exposure"
+      ],
+      "notableGaps": [
+        "PDF and document accessibility (WCAG for PDFs, remediation workflows) — critical for nonprofits producing grant reports, annual reports, and policy documents",
+        "Procurement and accessible vendor evaluation — how to write accessibility requirements into RFPs, evaluate ACRs/VPATs, and hold SaaS vendors accountable",
+        "User research with disabled participants — methodology for inclusive usability testing rather than audit-only evaluation",
+        "Accessibility program maturity models — how to assess and grow an organization's internal accessibility capability over time",
+        "Overlay and third-party tool evaluation — a dedicated resource critically analyzing automated overlay products that clients frequently ask about",
+        "Cognitive and learning disabilities — the resources here skew toward visual and motor impairments; COGA guidance is underrepresented",
+        "Social media and third-party platform accessibility — nonprofits with active social presence need guidance on accessible content beyond owned web properties",
+        "Cost estimation and ROI framing for accessibility work — practical tools for scoping and pricing consulting engagements for under-resourced clients"
+      ],
+      "errors": {
+        "listLabel": "Accessibility Links and Resources",
+        "generatedAt": "2025-07-24T00:00:00Z",
+        "totalUrls": 44,
+        "successCount": 28,
+        "failedCount": 16,
+        "failed": [
+          {
+            "url": "https://www.magentaa11y.com",
+            "label": "Magenta A11y",
+            "sectionContext": "Educational Resources",
+            "status": "thin",
+            "errorReason": "Page is a single-page application (SPA) that loads content dynamically via JavaScript. The fetched HTML contains only boilerplate and metadata with no substantive accessibility content visible in the static markup.",
+            "manualInstructions": "Visit https://www.magentaa11y.com in your browser. Once the page fully loads, copy the main body content describing the tool's purpose and features. Paste into data/accessibility-links-and-resources/manual/magenta-a11y.txt"
+          },
+          {
+            "url": "https://www.freecodecamp.org",
+            "label": "FreeCodeCamp.org - Learn how to code HTML, CSS, and JS",
+            "sectionContext": "Educational Resources",
+            "status": "error",
+            "errorReason": "Rate limited (429) after 3 retries",
+            "manualInstructions": "Visit https://www.freecodecamp.org in your browser. Copy the main content area describing FreeCodeCamp's courses and educational resources. Paste into data/accessibility-links-and-resources/manual/freecodecamp-org.txt"
+          },
+          {
+            "url": "https://www.w3schools.com/html/",
+            "label": "W3Schools - Learn HTML, CSS, and JS",
+            "sectionContext": "Educational Resources",
+            "status": "error",
+            "errorReason": "Rate limited (429) after 3 retries",
+            "manualInstructions": "Visit https://www.w3schools.com/html/ in your browser. Copy the main content describing W3Schools' HTML tutorial and reference materials. Paste into data/accessibility-links-and-resources/manual/w3schools-html.txt"
+          },
+          {
+            "url": "https://dwcag.org/#sign-up-section",
+            "label": "WCAG of the Day - Digestible WCAG, daily email education",
+            "sectionContext": "Web Content Accessibility Guidelines (WCAG) Resources",
+            "status": "error",
+            "errorReason": "URL mismatch: The requested URL is dwcag.org but the fetched page content is from albanydoorexperts.com, a Russian-language online casino (Vavada) site. The page is not related to WCAG or accessibility guidelines.",
+            "manualInstructions": "Visit https://dwcag.org in your browser (without the #sign-up-section fragment). Verify the site is legitimate and copy the main content describing the WCAG of the Day service. Paste into data/accessibility-links-and-resources/manual/wcag-of-the-day.txt — or mark as invalid if the domain has been redirected or is no longer operational."
+          },
+          {
+            "url": "https://cariefisher.com",
+            "label": "Carie Fisher",
+            "sectionContext": "Accessibility Personalities and Reading Material",
+            "status": "thin",
+            "errorReason": "Page is primarily a blog/portfolio index with navigation and cards linking to content. The landing page itself contains minimal substantive content (mostly navigation, SVG graphics, and article card titles without descriptions). No meaningful body text explaining the site's purpose or Carie Fisher's work is present on this page.",
+            "manualInstructions": "Visit https://cariefisher.com in your browser. Copy the main biography or about section describing Carie Fisher's work in accessibility. Paste into data/accessibility-links-and-resources/manual/carie-fisher.txt"
+          },
+          {
+            "url": "http://twitter.com/jsutt",
+            "label": "Jennifer Sutton on Twitter",
+            "sectionContext": "Accessibility Personalities and Reading Material",
+            "status": "error",
+            "errorReason": "HTTP 520 <none>",
+            "manualInstructions": "Visit http://twitter.com/jsutt in your browser. If the account is accessible, copy a brief description of Jennifer Sutton's accessibility work and contributions. Paste into data/accessibility-links-and-resources/manual/jennifer-sutton-twitter.txt — or note if the account is no longer available."
+          },
+          {
+            "url": "https://overlayfactsheet.com",
+            "label": "Overlay Fact Sheet - All you need to fight accessibility overlay companies and products",
+            "sectionContext": "Accessibility Personalities and Reading Material",
+            "status": "thin",
+            "errorReason": "Page contains only a meta refresh redirect to https://overlayfactsheet.com/en/ with no substantive content in the fetched HTML.",
+            "manualInstructions": "Visit https://overlayfactsheet.com/en/ (the redirect target) in your browser. Copy the main content describing overlay products and the fact sheet's arguments. Paste into data/accessibility-links-and-resources/manual/overlay-fact-sheet.txt"
+          },
+          {
+            "url": "https://webaccessibilitysurvey.com/",
+            "label": "WebAccessibilitySurvey.com - Survey Data from Assistive Technology Users",
+            "sectionContext": "Web Accessibility and Coding Resources",
+            "status": "thin",
+            "errorReason": "Page content is primarily HTML/CSS boilerplate and template structure with minimal visible text content in the fetched markup. The actual page body content appears to be loaded dynamically via JavaScript and is not present in the static HTML.",
+            "manualInstructions": "Visit https://webaccessibilitysurvey.com/ in your browser. Once the page fully loads, copy the main content describing the survey purpose, methodology, and key findings. Paste into data/accessibility-links-and-resources/manual/web-accessibility-survey.txt"
+          },
+          {
+            "url": "https://jigsaw.w3.org/css-validator/",
+            "label": "W3C CSS Validator",
+            "sectionContext": "Web Accessibility and Coding Resources",
+            "status": "thin",
+            "errorReason": "Page is primarily a form interface with minimal descriptive content. The substantive text is limited to navigation, form labels, and a single introductory note.",
+            "manualInstructions": "Visit https://jigsaw.w3.org/css-validator/ in your browser. Copy the introductory content and description of the CSS Validator tool's purpose and features. Paste into data/accessibility-links-and-resources/manual/w3c-css-validator.txt"
+          },
+          {
+            "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "label": "Apple's Human Interface Guidelines on Accessibility",
+            "sectionContext": "Native Mobile Resources",
+            "status": "thin",
+            "errorReason": "Page requires JavaScript to render content. Only HTML shell with metadata is available; substantive content is not present in the fetched markup.",
+            "manualInstructions": "Visit https://developer.apple.com/design/human-interface-guidelines/accessibility in your browser. Copy the main content describing Apple's accessibility guidelines for iOS and macOS development. Paste into data/accessibility-links-and-resources/manual/apple-accessibility-guidelines.txt"
+          },
+          {
+            "url": "https://developer.android.com/guide/topics/ui/accessibility/principles",
+            "label": "Android Developer Principles for Improving App Accessibility",
+            "sectionContext": "Native Mobile Resources",
+            "status": "error",
+            "errorReason": "fetch failed",
+            "manualInstructions": "Visit https://developer.android.com/guide/topics/ui/accessibility/principles in your browser. Copy the main content describing Android accessibility principles and implementation guidance. Paste into data/accessibility-links-and-resources/manual/android-accessibility-principles.txt"
+          },
+          {
+            "url": "https://www.magentaa11y.com/#/native-criteria/controls/overview",
+            "label": "Magenta A11y Native App Criteria",
+            "sectionContext": "Native Mobile Resources",
+            "status": "thin",
+            "errorReason": "Page is a single-page application (SPA) that renders content via JavaScript. The fetched HTML contains only framework scaffolding and metadata with no substantive accessibility content visible in the static markup.",
+            "manualInstructions": "Visit https://www.magentaa11y.com/#/native-criteria/controls/overview in your browser. Once the page fully loads, copy the main content describing native app accessibility criteria. Paste into data/accessibility-links-and-resources/manual/magenta-a11y-native-criteria.txt"
+          },
+          {
+            "url": "https://www.deque.com/get-started-axe-devtools-browser-extension/",
+            "label": "Axe DevTools Chrome/Browser Extension",
+            "sectionContext": "Accessibility Testing Tools",
+            "status": "thin",
+            "errorReason": "Page contains primarily navigation, scripts, and metadata. The actual body content is not visible in the fetched HTML—only WordPress/theme infrastructure and inline styling. Insufficient substantive content about the tool itself.",
+            "manualInstructions": "Visit https://www.deque.com/get-started-axe-devtools-browser-extension/ in your browser. Copy the main content describing Axe DevTools features, installation, and usage. Paste into data/accessibility-links-and-resources/manual/axe-devtools-extension.txt"
+          },
+          {
+            "url": "https://developer.chrome.com/docs/lighthouse/overview",
+            "label": "Google Lighthouse Developer Tools",
+            "sectionContext": "Accessibility Testing Tools",
+            "status": "thin",
+            "errorReason": "Page content appears to be primarily navigation structure and metadata. The main article content is not included in the fetched HTML (likely loaded dynamically). Substantive documentation about Lighthouse is not present in the provided page content.",
+            "manualInstructions": "Visit https://developer.chrome.com/docs/lighthouse/overview in your browser. Copy the main content explaining Lighthouse's purpose, accessibility auditing features, and how to use it. Paste into data/accessibility-links-and-resources/manual/google-lighthouse.txt"
+          },
+          {
+            "url": "https://www.accessibilityassociation.org/s/",
+            "label": "International Association of Accessibility Professionals, or IAAP",
+            "sectionContext": "Organizations",
+            "status": "thin",
+            "errorReason": "Page loaded but contains only HTML skeleton/boilerplate with no accessible content. The actual page content is rendered client-side via JavaScript/LWR framework and not present in the initial HTML response.",
+            "manualInstructions": "Visit https://www.accessibilityassociation.org/s/ in your browser. Copy the main content describing IAAP's mission, membership, certifications, and programs. Paste into data/accessibility-links-and-resources/manual/iaap.txt"
+          },
+          {
+            "url": "https://www.deque.com",
+            "label": "Deque",
+            "sectionContext": "A11y Companies",
+            "status": "thin",
+            "errorReason": "Page content is primarily JavaScript-heavy (New Relic analytics, VWO, Google Tag Manager, and WordPress admin scripts). The fetched HTML contains minimal substantive content about Deque's accessibility solutions—mostly metadata, tracking code, and structural elements without the main page content that would typically be rendered client-side.",
+            "manualInstructions": "Visit https://www.deque.com in your browser. Copy the main content describing Deque's accessibility software, services, and training offerings. Paste into data/accessibility-links-and-resources/manual/deque.txt"
+          },
+          {
+            "url": "https://makeitfable.com",
+            "label": "Fable User Testing",
+            "sectionContext": "A11y Companies",
+            "status": "thin",
+            "errorReason": "Page loaded but primary content is not visible in fetched HTML. The page appears to be a WordPress site with heavy JavaScript rendering and mostly contains CSS, scripts, and metadata. Substantive content about Fable's services is not present in the static HTML snapshot.",
+            "manualInstructions": "Visit https://makeitfable.com in your browser. Copy the main content describing Fable's user testing platform and accessibility services. Paste into data/accessibility-links-and-resources/manual/fable-user-testing.txt"
+          },
+          {
+            "url": "https://easysurf.ca",
+            "label": "Easy Surf",
+            "sectionContext": "A11y Companies",
+            "status": "error",
+            "errorReason": "Rate limited (429) after 3 retries",
+            "manualInstructions": "Visit https://easysurf.ca in your browser. Copy the main content describing Easy Surf's accessibility services and offerings. Paste into data/accessibility-links-and-resources/manual/easy-surf.txt"
+          },
+          {
+            "url": "https://www.tpgi.com",
+            "label": "The Paciello Group International - TPGI",
+            "sectionContext": "A11y Companies",
+            "status": "error",
+            "errorReason": "Rate limited (429) after 3 retries",
+            "manualInstructions": "Visit https://www.tpgi.com in your browser. Copy the main content describing TPGI's accessibility consulting, training, and services. Paste into data/accessibility-links-and-resources/manual/tpgi.txt"
+          },
+          {
+            "url": "https://www.boia.org",
+            "label": "Bureau of Internet Accessibility",
+            "sectionContext": "A11y Companies",
+            "status": "error",
+            "errorReason": "Rate limited (429) after 3 retries",
+            "manualInstructions": "Visit https://www.boia.org in your browser. Copy the main content describing BOIA's accessibility testing, certification, and services. Paste into data/accessibility-links-and-resources/manual/bureau-of-internet-accessibility.txt"
+          }
+        ]
+      }
+    }
+  ]
+}
