@@ -1,19 +1,38 @@
 // Vercel serverless function — proxies re-summarization through Claude API
 // so the API key stays server-side
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+export default async function handler(request) {
+  if (request.method !== 'POST') {
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+      status: 405,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'ANTHROPIC_API_KEY not configured on server' });
+    return new Response(JSON.stringify({ error: 'ANTHROPIC_API_KEY not configured on server' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
-  const { url, label, sectionContext, pastedContent } = req.body || {};
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  const { url, label, sectionContext, pastedContent } = body;
   if (!pastedContent || !pastedContent.trim()) {
-    return res.status(400).json({ error: 'pastedContent is required' });
+    return new Response(JSON.stringify({ error: 'pastedContent is required' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const prompt = `You are a web scraping and first-pass extraction agent. You will analyze
@@ -49,7 +68,6 @@ Rules:
 - Never invent content — only summarize what is provided`;
 
   try {
-    // Use fetch directly instead of SDK to avoid ESM/bundling issues in Vercel
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -66,7 +84,10 @@ Rules:
 
     if (!response.ok) {
       const errBody = await response.text();
-      return res.status(502).json({ error: `Anthropic API error: ${response.status}`, detail: errBody });
+      return new Response(JSON.stringify({ error: `Anthropic API: ${response.status}`, detail: errBody }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     const data = await response.json();
@@ -78,8 +99,18 @@ Rules:
     if (cleaned.endsWith('```')) cleaned = cleaned.slice(0, -3);
 
     const parsed = JSON.parse(cleaned.trim());
-    return res.status(200).json(parsed);
+    return new Response(JSON.stringify(parsed), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (err) {
-    return res.status(500).json({ error: err.message, stack: err.stack });
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
+
+export const config = {
+  runtime: 'edge',
+};
