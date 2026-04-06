@@ -1,8 +1,6 @@
 // Vercel serverless function — proxies re-summarization through Claude API
 // so the API key stays server-side
 
-import Anthropic from '@anthropic-ai/sdk';
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -10,15 +8,13 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'ANTHROPIC_API_KEY not configured' });
+    return res.status(500).json({ error: 'ANTHROPIC_API_KEY not configured on server' });
   }
 
-  const { url, label, sectionContext, pastedContent } = req.body;
+  const { url, label, sectionContext, pastedContent } = req.body || {};
   if (!pastedContent || !pastedContent.trim()) {
     return res.status(400).json({ error: 'pastedContent is required' });
   }
-
-  const client = new Anthropic({ apiKey });
 
   const prompt = `You are a web scraping and first-pass extraction agent. You will analyze
 pasted content from a web page and extract a structured summary.
@@ -53,13 +49,29 @@ Rules:
 - Never invent content — only summarize what is provided`;
 
   try {
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2048,
-      messages: [{ role: 'user', content: prompt }],
+    // Use fetch directly instead of SDK to avoid ESM/bundling issues in Vercel
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 2048,
+        messages: [{ role: 'user', content: prompt }],
+      }),
     });
 
-    const text = response.content[0].text;
+    if (!response.ok) {
+      const errBody = await response.text();
+      return res.status(502).json({ error: `Anthropic API error: ${response.status}`, detail: errBody });
+    }
+
+    const data = await response.json();
+    const text = data.content[0].text;
+
     let cleaned = text.trim();
     if (cleaned.startsWith('```json')) cleaned = cleaned.slice(7);
     else if (cleaned.startsWith('```')) cleaned = cleaned.slice(3);
@@ -68,6 +80,6 @@ Rules:
     const parsed = JSON.parse(cleaned.trim());
     return res.status(200).json(parsed);
   } catch (err) {
-    return res.status(500).json({ error: err.message });
+    return res.status(500).json({ error: err.message, stack: err.stack });
   }
 }
