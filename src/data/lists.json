@@ -7,44 +7,48 @@
       "synthesizedAt": "2025-07-24T12:00:00Z",
       "pedagogy": {
         "chosenApproach": 2,
-        "approachName": "The Consultant's Casebook",
-        "philosophy": "Learning is most durable when it is anchored to consequential decisions the learner will actually face. Rather than presenting accessibility knowledge as a curriculum to complete, this approach frames every resource and concept as evidence the learner would need to handle a real consulting scenario — a client objection, an audit finding, an RFP question, a team workshop. The senior UX professional learns fastest not by reading about accessibility but by rehearsing the judgment calls that define credible consulting practice. Each session presents a scenario first, lets the learner reason from their existing expertise, then introduces resources as the evidence base that sharpens or corrects that reasoning. This produces the social currency and practical fluency the learner explicitly wants — not as abstract knowledge but as internalized patterns of professional judgment.",
+        "approachName": "Consulting Clinic: Case-First, Evidence-Second",
+        "philosophy": "A senior practitioner learns fastest when new knowledge is recruited to solve a problem they can already feel. Each session opens with a realistic nonprofit consulting scenario — a board objection, an audit finding, an RFP question — that creates an immediate knowledge gap, then surfaces the curated resources as the evidence kit needed to close that gap. This inverts the traditional 'read then apply' pattern: the learner encounters the situation before the theory, which activates prior UX expertise as a scaffold rather than a liability. Retention mechanisms are built around consultant outputs — a response to a client email, a sentence for a deliverable, a recommendation in an audit — because producing an artifact forces retrieval and reorganization of information rather than passive recognition. Social currency is treated as a first-class learning outcome: each session explicitly flags which claims, citations, and vocabulary signal credibility in the a11y practitioner community, and which vendor or overlay narratives to treat with skepticism.",
         "appStructure": {
-          "primaryOrganization": "The app is organized as a collection of named Cases, each representing a realistic consulting encounter the learner will face with a nonprofit client. Cases are grouped into four Practice Areas — Foundation Work, Technical Audits, Communications and Media, and Program Building — rather than following the curriculum module order. Each case has a difficulty tier (Entry, Working, Advanced) and a dominant consulting mode (Advising, Auditing, Teaching, Negotiating). The learner builds a Casebook that reflects their growing practice, not a course completion record.",
-          "sessionUnit": "One session equals one Case, estimated at 20–40 minutes. A Case has five phases: (1) Situation Brief — a one-paragraph client scenario with a specific decision or question the learner must respond to; (2) First Call — the learner records their initial response using their existing UX knowledge, explicitly surfacing what they know and what they are uncertain about; (3) Evidence Locker — two to four curated resources from the curriculum are revealed as the expert evidence base for this case, each introduced with its consulting-specific rationale rather than its general description; (4) Revised Position — the learner updates their response, annotating what changed and why; (5) Practice Pattern — a single memorable heuristic extracted from the case that can be retrieved under time pressure in a real client conversation.",
+          "primaryOrganization": "Eight consulting clinics mapped one-to-one onto curriculum modules, each structured as a three-act scenario: (1) a triggering client moment that surfaces the knowledge gap, (2) a guided evidence kit of curated resources with annotated why-this-why-now rationale, and (3) a consultant output challenge where the learner drafts a real artifact — a reply, a recommendation, a checklist annotation — that is saved to a personal Consulting Toolkit for later reuse",
+          "sessionUnit": "One consulting clinic, estimated 30–60 minutes, comprising: one scenario setup screen, two to six resource cards with progressive-disclosure depth controls, one or two active retrieval prompts, one consultant output challenge, and a session debrief that surfaces cross-cutting themes and notable gaps relevant to that clinic",
           "retentionMechanisms": [
-            "Spaced retrieval prompts: seven and thirty days after completing a case, the learner receives a micro-prompt replaying only the Situation Brief and asking them to reconstruct their Practice Pattern without looking at notes, then reveals the pattern for self-scoring",
-            "Interleaved case sequencing: cases from different Practice Areas are mixed in the recommended queue so adjacent sessions require switching consulting modes, combating context-dependent forgetting",
-            "Uncertainty tagging at First Call: the learner explicitly marks which parts of their initial response are confident versus guessed, and the app tracks calibration over time — whether confidence correlates with accuracy after evidence review",
-            "Transferable heuristic library: each Practice Pattern feeds a personal reference card the learner can export and consult in real client situations, reinforcing that retention has a practical payoff",
-            "Contrastive pairs: cases are occasionally presented in pairs where two superficially similar client situations require meaningfully different responses, forcing discrimination rather than pattern matching alone",
-            "Synthesis prompts at Practice Area completion: after completing all cases in a Practice Area, a single integrative question asks the learner to write a two-sentence positioning statement for that domain as if responding to an RFP, consolidating the area's Practice Patterns into a transferable professional narrative",
-            "Cross-case linking: after each Evidence Locker reveal, the app surfaces one prior case whose evidence overlaps, asking the learner to identify the connection — building the associative network that supports flexible retrieval"
+            "Scenario-based activation: each clinic opens with a realistic client situation (board objection, RFP requirement, audit finding) before any resource is shown, creating a felt knowledge gap that motivates reading",
+            "Progressive disclosure resource cards: each resource card shows only the label and why-this-why-now hook by default; key topics and description expand on demand, reducing cognitive load while preserving depth for motivated exploration",
+            "Consultant output challenges: each clinic ends with a constrained drafting task — write one paragraph for a client email, annotate one checklist item, draft one procurement requirement — requiring active retrieval rather than passive review",
+            "Personal Consulting Toolkit: all drafted outputs, bookmarked resource cards, and session notes are saved to a persistent artifact library the learner can export and use in real client work, creating extrinsic motivation to complete sessions",
+            "Spaced review prompts: the app surfaces a previously completed clinic's scenario and asks the learner to recall their drafted output and the key resource they cited, shown on a distributed schedule aligned with Ebbinghaus spacing",
+            "Credibility flags: a 'social currency' annotation layer highlights which citations carry weight in the a11y community (WebAIM Million, Feingold's Structured Negotiation, Roselli on overlays) and which claims require skepticism, building the practitioner judgment that differentiates expert consultants",
+            "Freshness warnings: resources with freshnessFlag true are surfaced with a visible caution indicator and the freshnessNote, teaching the learner to evaluate source currency as a professional habit",
+            "Notable gaps sidebar: each clinic surfaces the relevant notable gaps from the curriculum meta-analysis as a 'blind spot radar,' prompting the learner to note where their current evidence kit is incomplete before advising a real client",
+            "Cross-cutting theme threading: a persistent sidebar or bottom-drawer shows which cross-cutting themes are active in the current clinic, allowing the learner to build a mental map of how modules relate rather than treating them as isolated units"
           ],
-          "navigationModel": "The app opens to a Practice Area dashboard showing case cards organized by area and tier. A recommended queue surfaces the next highest-priority case based on a combination of: prerequisite cases completed, time since last retrieval prompt, and Practice Area balance. The learner can follow the queue or browse freely. Within a case, navigation is strictly linear through the five phases — the learner cannot skip to Evidence Locker without completing First Call, enforcing generative retrieval before exposure. Between cases, the learner can access their full Casebook to review completed cases, their heuristic library, and their calibration history. A global search allows finding cases or resources by topic keyword, supporting just-in-time lookup when a real client situation triggers a need to review a specific case.",
+          "navigationModel": "Default path is linear clinic-by-clinic to preserve the conceptual scaffolding from foundations to certification, but the learner can enter any clinic after completing module one; within a clinic, the three-act structure is gated so the evidence kit does not appear until the scenario has been read, and the consultant output challenge does not unlock until at least two resource cards have been opened; a dashboard view shows all eight clinics as cards with completion state, last-visited timestamp, and a count of toolkit artifacts saved from each session",
           "progressIndicators": [
-            "Casebook fill rate: a visual representation of the learner's Casebook showing completed cases as filled cards and available cases as outlines, organized by Practice Area, giving a spatial sense of coverage without implying a single completion state",
-            "Calibration score: a running metric showing how closely the learner's self-assessed confidence at First Call correlates with their self-assessed accuracy after evidence review, trending toward expert-level calibration over time",
-            "Practice Pattern retrieval success rate: percentage of spaced retrieval prompts where the learner self-scored their reconstruction as accurate, shown per Practice Area to reveal relative strengths",
-            "Consulting mode coverage: a four-part indicator showing how many cases the learner has completed in each consulting mode — Advising, Auditing, Teaching, Negotiating — to surface gaps in professional range",
-            "Days since last session: a low-pressure streak indicator framed as 'last consulted' rather than a gamified streak, consistent with a professional tool rather than a learning app"
+            "Clinic completion rings: a segmented ring per clinic card on the dashboard fills as the learner completes the scenario screen, opens resource cards, and submits a consultant output challenge",
+            "Toolkit artifact count: a persistent header counter showing how many reusable artifacts the learner has saved, framing progress in terms of consulting readiness rather than content consumed",
+            "Credibility score (self-assessed): after each clinic, the learner rates their confidence answering the triggering scenario on a three-point scale; the dashboard surfaces clinics where confidence remains low as priority review targets",
+            "Spaced review queue depth: a visible count of clinics due for spaced review, surfaced on the dashboard and as an optional session-start prompt, making the review schedule legible rather than opaque",
+            "Notable gaps tracker: a checklist of the eight curriculum gaps that the learner can mark as 'on my radar,' 'researching,' or 'covered,' giving a visible map of consulting readiness beyond the curated content",
+            "Cross-cutting theme completion map: a small visual matrix showing which of the eight cross-cutting themes have appeared in completed clinics, filling in as sessions are finished to make conceptual coverage visible"
           ]
         },
         "designDirectives": [
-          "Visual identity should read as a professional consulting tool, not an e-learning platform — use a typographic-first design with the aesthetic register of a well-designed legal or strategy brief, avoiding gamification iconography like badges, XP points, or progress bars styled as progress bars",
-          "The Situation Brief in each case must be written in first-person client voice — direct quotes from a fictional nonprofit stakeholder — so the learner viscerally inhabits the consulting encounter rather than reading about it abstractly",
-          "First Call input must be a free-text field with a visible word minimum of fifty words, paired with an explicit uncertainty toggle for each claim the learner makes — this structural friction prevents the learner from skipping genuine reasoning",
-          "Evidence Locker cards must display the consulting-specific rationale (whyThisWhyNow field) as the primary text, with the general resource description collapsed by default — the learner should encounter each resource through its consulting application first",
-          "Resources flagged with freshnessFlag true must display a prominent staleness notice in the Evidence Locker with specific guidance on what to verify before citing to a client, framed as professional due diligence rather than a warning",
-          "The Practice Pattern phase must constrain the learner to write a heuristic of thirty words or fewer, with a live word counter — this constraint forces distillation and produces a pattern that is actually retrievable under time pressure",
-          "Spaced retrieval prompts must arrive as a dedicated session type that looks identical to the Situation Brief phase but explicitly states 'You completed this case N days ago — reconstruct your Practice Pattern' before revealing any content, preserving the retrieval attempt as a distinct cognitive act",
-          "The heuristic library must be exportable as a print-optimized single-page PDF formatted as a reference card — this gives the artifact real-world utility and reinforces that the learning produces a tangible professional asset",
-          "Contrastive case pairs must be visually linked on the Practice Area dashboard with a subtle connector element so the learner is aware they will eventually encounter both and can anticipate the comparison",
-          "Cross-case links surfaced after Evidence Locker reveal must require the learner to type or select the connection before the prior case is revealed — the connection must be generated, not recognized, to produce durable associative encoding",
-          "The calibration history view must show individual case data points as a scatter plot of confidence versus accuracy, with a diagonal line representing perfect calibration — this gives the senior professional the data-oriented feedback they are accustomed to from their enterprise UX background",
-          "Notable gaps from the curriculum must appear in the Practice Area dashboard as greyed-out case card silhouettes labeled with the gap topic and a brief rationale for why they are not yet covered — this is honest about curriculum limits and frames the gaps as future professional development opportunities rather than failures",
-          "Mobile layout must be fully functional because the learner may want to review a Practice Pattern or complete a retrieval prompt between client meetings — the five-phase case flow must collapse gracefully to a single-column vertical scroll",
-          "Color palette must pass WCAG 2.1 AA contrast at every text size, and the app must be keyboard navigable throughout — the product teaching accessibility must itself be accessible, and this should be called out explicitly in an app-level 'about this product' note as a demonstration of the practice"
+          "Open every clinic with a single, specific client scenario presented as a first-person consulting moment — a quoted email from a nonprofit ED, an audit finding excerpt, a board member's objection — before any resource or module framing is shown; the scenario must be written at the specificity level of real client work, not a generic 'imagine you are advising a client' prompt",
+          "Design resource cards as two-state components: collapsed state shows only the resource label and the why-this-why-now text (which is the pedagogically active hook); expanded state adds key topics as tags, a one-sentence description, and a direct link; never show the full description in the collapsed state because it reduces the motivation to read the actual resource",
+          "Treat the why-this-why-now field as the primary pedagogical text, not the description field; typographically, the why-this-why-now should be the most visually prominent text on the card after the label, set in a reading-weight typeface at comfortable size, not truncated",
+          "Gate the consultant output challenge behind a soft interaction requirement: the challenge textarea is visible but inactive with a clear message like 'Open at least two resources to unlock this challenge'; this is a motivation nudge, not a hard block — a learner who wants to skip should be able to override it with one additional click",
+          "Design the Consulting Toolkit as a genuine artifact, not a badge system: each saved output should be editable after saving, tagged with the clinic it came from, and exportable as a plain-text or markdown file; the toolkit is the learner's real deliverable from the course and should feel like a professional document, not a game reward",
+          "Surface freshness warnings (freshnessFlag true) as a distinct visual treatment on the resource card — a visible caution chip with the freshnessNote accessible on hover or tap — and include a brief explanatory tooltip the first time a learner encounters one explaining why source currency matters in standards-based consulting work",
+          "Implement the spaced review system as a lightweight prompt, not a mandatory interruption: on the dashboard, show a 'Review due' chip on clinic cards with scheduled review items; at session start, offer a one-screen recall prompt ('What was the key citation you used in your response to this scenario?') before showing the full clinic; never block the learner from accessing new content to complete a review",
+          "Design the notable gaps sidebar as a persistent but collapsible panel within each clinic, not a separate section the learner has to navigate to; each gap entry should include a one-sentence description of why the gap matters for nonprofit consulting work specifically, drawn from the curriculum's notableGaps field",
+          "Use the audienceLevel field on resource cards as a wayfinding signal, not a gate: display a small 'Foundational / Practitioner / Advanced' chip on each card so the learner can calibrate how much prior knowledge a resource assumes, but never hide or lock a resource based on level",
+          "Design the cross-cutting themes as a semantic layer the learner can toggle on: in the default view, themes are not visible; when toggled, each resource card gains a color-coded tag showing which cross-cutting themes it addresses; this allows the senior learner who prefers systems-level pattern recognition to see the connective tissue across modules without cluttering the default reading experience",
+          "Write all scenario and challenge copy in second-person present tense ('Your client's board chair has just asked...') to activate the learner's professional identity and simulate the felt stakes of real consulting moments; avoid the distancing effect of third-person case study framing",
+          "Ensure the dashboard clinic cards communicate consulting readiness, not learning progress: label completion states with practitioner-language like 'Ready to deploy,' 'In progress,' and 'Not started' rather than percentage bars or generic completion checkmarks",
+          "For the module-8 certification clinic, design the consultant output challenge as a self-assessment rubric rather than a drafting task — the learner evaluates their current knowledge against CPACC and WAS competency domains and identifies the three highest-priority gaps to address before sitting for certification; this honors the senior learner's self-directedness while providing structure",
+          "Implement responsive layout that treats the clinic as the primary unit on all screen sizes: on mobile, the three-act structure becomes a vertical sequence with full-width cards and a sticky bottom bar showing clinic progress and the toolkit save action; do not attempt to show the full dashboard and clinic content simultaneously on small screens",
+          "Apply a typographic and color system that reads as professional-grade consulting material, not an educational platform: use a restrained palette, editorial typography, and generous whitespace; the visual language should feel closer to a premium research brief than a learning management system, because the learner's identity is consultant, not student"
         ]
       },
       "modules": [
@@ -164,37 +168,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A nonprofit board member tells you, 'We serve everyone equally — we don't have disabled users, so accessibility isn't a priority for us.' Which response best demonstrates consulting-level command of the foundational case for accessibility?",
+              "question": "A nonprofit board member pushes back on your accessibility proposal, saying their organization serves mostly elderly donors who 'aren't disabled.' How do you most effectively reframe accessibility's value to this audience?",
               "options": [
-                "Cite the ADA Title II regulations and explain that legal compliance is mandatory regardless of perceived user demographics",
-                "Challenge the assumption about their user base by connecting the situational, temporary, and permanent disability model to their actual audience, then layer in the legal and mission-alignment arguments",
-                "Show them WCAG standards and explain that accessible sites also rank better in search engines",
-                "Agree to defer accessibility work until a disabled user formally requests accommodation"
+                "Cite ADA Title II regulations and the legal penalties for noncompliance to shift the conversation to risk management",
+                "Explain that disability is a spectrum that includes age-related impairments, and that accessible design improves the experience for all users including their core donor base",
+                "Show WCAG compliance levels and explain that AA is the industry standard their peers are meeting",
+                "Argue that inclusive design principles require equal access regardless of who the primary audience is"
               ],
               "correctIndex": 1,
-              "explanation": "Correcting the flawed premise — that disability is a fixed, visible category — with the permanent/temporary/situational model reframes accessibility as universal benefit and aligns with the nonprofit's own mission before introducing legal risk, which is a more persuasive sequence for skeptical boards."
+              "explanation": "Connecting accessibility to the board's existing constituency — elderly donors who experience situational and age-related impairments — uses inclusive design framing to make the business and ethical case land simultaneously. This is more persuasive than leading with legal risk for an audience that doesn't yet see themselves as having accessibility stakeholders."
             },
             {
-              "question": "A nonprofit is drafting an RFP for a new donor portal and asks you whether to include accessibility requirements in vendor procurement language. They're worried it will reduce the number of bidders. How do you advise them?",
+              "question": "An NGO client is responding to a foundation RFP that asks how their digital platforms support equitable access. You're drafting the accessibility section. Which approach best demonstrates consulting credibility and substance?",
               "options": [
-                "Recommend omitting accessibility requirements to maximize vendor competition, then audit the chosen vendor's output post-launch",
-                "Advise them to add a brief WCAG 2.1 AA mention as a checkbox item at the end of technical requirements",
-                "Recommend including specific WCAG 2.1 AA conformance requirements and an Accessibility Conformance Report request, explaining that accessible procurement protects them from downstream legal liability and aligns with structured negotiation best practices",
-                "Suggest they wait until ADA Title II enforcement guidance is finalized before adding procurement language"
+                "Reference WCAG AA conformance, name specific assistive technologies the site has been tested with, and cite a structured negotiation or legal precedent that establishes the standard of care",
+                "Describe the organization's commitment to inclusive design and mention that alt text and color contrast have been reviewed",
+                "List the accessibility features of their CMS platform and note that automated scanning tools show zero critical errors",
+                "Explain that the site meets Section 508 standards, which exceed what most nonprofits achieve"
               ],
-              "correctIndex": 2,
-              "explanation": "Accessible procurement language is a proactive legal and mission-alignment strategy; requiring conformance evidence (like a VPAT) from vendors shifts liability appropriately and is consistent with structured negotiation principles covered in this module."
+              "correctIndex": 0,
+              "explanation": "A credible RFP response names the standard (WCAG AA), demonstrates real testing practice (specific assistive technologies), and anchors the claim in legal or advocacy precedent — the vocabulary and evidence signals that distinguish a practitioner from someone reading from a checklist."
             },
             {
-              "question": "A program officer at a foundation asks you to justify including accessibility consulting fees in a digital transformation grant budget. Which framing is most likely to succeed with a nonprofit funder?",
+              "question": "A nonprofit executive director asks why accessible procurement matters when they're just purchasing an off-the-shelf donor management platform. What is the strongest consulting response?",
               "options": [
-                "Frame accessibility as a technical debt item that will save money on future redesigns",
-                "Frame it as an ethical obligation under disability rights law that the organization must meet",
-                "Frame it as expanding the organization's reach to disabled communities they currently exclude, directly advancing the foundation's equity goals and reducing the organization's legal exposure simultaneously",
-                "Frame it as a one-time compliance cost that will be completed before the grant period ends"
+                "Accessible procurement ensures the vendor's product meets WCAG 2.1 AA so your staff and constituents with disabilities can use the platform without workarounds or exclusion",
+                "Procurement decisions are primarily a legal concern and should be reviewed by counsel before signing any software contract",
+                "Most SaaS platforms self-certify accessibility, so reviewing their documentation is sufficient due diligence",
+                "Accessible procurement is mainly relevant for government contracts and may not apply to nonprofit software purchases"
               ],
-              "correctIndex": 2,
-              "explanation": "Funders respond to mission impact and equity arguments first; connecting accessibility to expanded reach for underserved communities aligns the budget line with the foundation's own strategic goals, making the business and ethical case simultaneously."
+              "correctIndex": 0,
+              "explanation": "Accessible procurement frames the purchasing decision as a direct equity and usability issue for both staff and constituents — grounding the 'why' in the organization's own mission rather than abstract compliance, which is the persuasive register that moves nonprofit decision-makers."
             }
           ]
         },
@@ -278,37 +282,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "Your audit of a nonprofit's donation form finds that error messages appear only in red text without any other indicator, and focus order skips the error summary entirely. A developer asks which WCAG success criteria are implicated. Which answer correctly maps the findings to WCAG principles and criteria?",
+              "question": "During a WCAG audit debrief, your client asks why you flagged a missing skip navigation link as Level A rather than AA. They want to deprioritize it because 'it's just for keyboard users.' How do you explain the conformance level decision and push back on the prioritization logic?",
               "options": [
-                "Both issues fall under Operable: the focus order problem is 2.4.3 Focus Order and the color-only issue is 2.1.1 Keyboard",
-                "The color-only error indicator violates Perceivable 1.4.1 Use of Color; the focus order problem violates Operable 2.4.3 Focus Order",
-                "Both issues fall under Understandable: 3.3.1 Error Identification covers the color problem and 3.3.2 Labels or Instructions covers focus order",
-                "The color issue violates Robust 4.1.3 Status Messages and the focus order issue violates Understandable 3.3.4"
+                "Explain that Level A failures represent the minimum threshold below which a page is effectively unusable for some users, and that keyboard navigation is the baseline for screen reader, switch access, and voice control users — not a niche case",
+                "Agree that Level A issues can sometimes be lower priority if the affected user group is small, and suggest scheduling it for a future sprint",
+                "Note that skip navigation is a Level AA requirement, so it should be addressed alongside other AA items in the remediation backlog",
+                "Clarify that Level A applies only to static content pages and may not be required for interactive application views"
               ],
-              "correctIndex": 1,
-              "explanation": "Color-only error signaling maps to Perceivable 1.4.1, which prohibits using color as the sole visual means of conveying information; programmatic focus order failures map to Operable 2.4.3, which requires meaningful focus sequence."
+              "correctIndex": 0,
+              "explanation": "Level A criteria define the floor of accessibility — failure means the content is inaccessible to entire user groups, not just inconvenient. Correctly identifying keyboard navigation as the foundation for multiple assistive technologies counters the 'niche user' dismissal with accurate scope."
             },
             {
-              "question": "A client asks whether they need to meet WCAG 2.2 or whether WCAG 2.1 AA is still sufficient for legal defensibility. How do you advise them?",
+              "question": "A developer on a nonprofit client's team argues that since they're targeting WCAG 2.1 AA, they don't need to worry about 2.2 additions like Focus Appearance or Dragging Movements. How do you advise the team?",
               "options": [
-                "Tell them WCAG 2.2 supersedes 2.1 entirely and they must retest everything against the new version immediately",
-                "Explain that WCAG 2.2 is backwards compatible with 2.1 — meeting 2.2 AA means meeting 2.1 AA — and that while most current legal standards reference 2.1 AA, proactively addressing 2.2's new criteria (like 2.4.11 Focus Appearance) demonstrates due diligence and future-proofs their compliance posture",
-                "Advise them to wait until regulators formally adopt WCAG 2.2 before investing in any remediation beyond 2.1 AA",
-                "Recommend targeting WCAG 2.0 AA since it is the ISO/IEC 40500 standard and therefore the most legally defensible baseline"
+                "Confirm that 2.1 AA is the current legal baseline in most jurisdictions, but recommend proactively adopting 2.2 criteria that address real user needs — particularly Focus Appearance, which resolves common keyboard visibility failures already in their backlog",
+                "Agree that 2.2 compliance is optional and should only be pursued if a client specifically requests it in their contract scope",
+                "Explain that 2.2 supersedes 2.1 entirely and the team must now meet all new criteria or risk legal exposure",
+                "Suggest waiting until 2.2 becomes the formal ISO standard before incorporating any new success criteria into the workflow"
               ],
-              "correctIndex": 1,
-              "explanation": "WCAG 2.2 is backwards compatible, so it's a superset of 2.1 AA conformance; advising proactive adoption of 2.2 criteria is strategically sound because it anticipates regulatory updates while the backwards compatibility means no prior 2.1 AA work is wasted."
+              "correctIndex": 0,
+              "explanation": "WCAG 2.2 is backwards-compatible with 2.1, and several new criteria address problems already visible in most audits — advising selective adoption based on real user impact is the practitioner move that builds credibility while managing client scope realistically."
             },
             {
-              "question": "During a workshop with a nonprofit's content team, a writer asks why AAA criteria are not required for their site. How do you explain the three-level structure in a way that builds practical judgment rather than just compliance-minimum thinking?",
+              "question": "A nonprofit client's design system uses custom-styled div-based buttons throughout their application. Their developer says the components 'look and behave correctly.' From a WCAG Robust principle perspective, what is the core risk and what remediation guidance do you give?",
               "options": [
-                "Explain that AAA criteria are aspirational extras that only large tech companies attempt and that nonprofits should focus entirely on A and AA",
-                "Explain that AAA conformance is not required as a general policy because some AAA criteria cannot be satisfied for all content types, but specific AAA criteria — like plain language (3.1.5) or extended audio description (1.2.7) — may be highly achievable and strategically valuable for a nonprofit serving cognitively diverse audiences",
-                "Tell the team that AAA is irrelevant until they pass a WCAG 2.1 AA audit, at which point they can revisit",
-                "Explain that AAA criteria are reserved for government and healthcare sites under Section 508 and do not apply to nonprofits"
+                "Div elements lack the native semantics that browsers expose to the accessibility tree, meaning assistive technologies may not identify them as interactive controls — remediate by replacing with native button elements or adding precise ARIA role, name, and state attributes with full keyboard support",
+                "The Robust principle primarily concerns markup validation, so running an HTML validator and fixing reported errors will resolve any assistive technology compatibility issues",
+                "Custom div buttons are acceptable under WCAG if they pass automated contrast and focus indicator checks, since visual behavior is what the Robust principle evaluates",
+                "The risk is limited to older screen readers; modern NVDA and VoiceOver versions handle div-based interactive elements reliably without additional ARIA"
               ],
-              "correctIndex": 1,
-              "explanation": "The nuanced answer — that AAA isn't globally required but specific AAA criteria may be both achievable and mission-aligned — builds the judgment that compliance floors shouldn't cap ambition, which is the kind of strategic framing that distinguishes a consultant from a checkbox auditor."
+              "correctIndex": 0,
+              "explanation": "The Robust principle requires that content be interpretable by a wide range of assistive technologies, which depends on correct semantics in the accessibility tree — not visual appearance. Native HTML is the first-choice remediation because it carries implicit roles and keyboard behavior that ARIA must otherwise replicate entirely."
             }
           ]
         },
@@ -454,37 +458,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A developer at a resource-constrained nonprofit has built a custom dropdown menu using nested <div> elements with click handlers and ARIA roles added afterward. They ask if this is acceptable. What is your most accurate and practically useful response?",
+              "question": "A nonprofit's development team is remediating a complex data table built entirely with div and span elements. The team lead proposes wrapping everything in a role='grid' with aria-labels instead of refactoring to native HTML table elements, citing timeline pressure. How do you advise them?",
               "options": [
-                "Approve it, since ARIA roles make any HTML element semantically equivalent to its native counterpart",
-                "Reject it entirely and require a native <select> element in all cases",
-                "Explain that the first rule of ARIA is to use native HTML first — a native <select> or <details>/<summary> pattern carries built-in keyboard behavior and accessibility API mapping that a <div>-based widget must manually replicate across all assistive technologies, creating significant maintenance burden and reliability risk for a team without dedicated accessibility resources",
-                "Advise them to add tabindex='0' and an aria-label to the outer div and consider the issue resolved"
+                "Recommend refactoring to semantic HTML table elements as the more reliable path — native table, thead, th with scope, and caption provide robust accessibility tree exposure with less implementation risk than a fully ARIA-constructed grid, which requires precise role and property management to avoid introducing new failures",
+                "Approve the ARIA grid approach since role='grid' is a well-supported ARIA pattern that major screen readers handle consistently, and it avoids a larger refactor",
+                "Suggest a hybrid: keep the div structure but add role='table' and aria-rowcount attributes, which will satisfy most screen reader compatibility requirements",
+                "Advise the team to add a visually hidden HTML table that mirrors the data, keeping the div structure intact for visual rendering"
               ],
-              "correctIndex": 2,
-              "explanation": "The 'first rule of ARIA' principle — prefer native semantics — is the force-multiplier for resource-constrained teams because native elements provide keyboard support and AT compatibility by default, while ARIA-on-divs requires reproducing all of that behavior manually and testing across NVDA, JAWS, and VoiceOver combinations."
+              "correctIndex": 0,
+              "explanation": "The first rule of ARIA is to use native HTML when it exists — semantic table elements provide the correct accessibility tree relationships with far lower implementation risk than reconstructing equivalent semantics with ARIA, especially under timeline pressure at a resource-constrained nonprofit."
             },
             {
-              "question": "An audit of a nonprofit's site reveals that their main navigation, search form, and footer are not marked with ARIA landmark regions, and heading levels skip from H1 to H4 throughout page content. A developer argues these are minor cosmetic issues. How do you characterize the actual impact?",
+              "question": "You're reviewing a nonprofit's React application and notice that all navigation, main content, and footer regions are wrapped in generic div elements with CSS classes like .nav and .footer. A screen reader user on your testing team reports they cannot jump between sections efficiently. What is the root cause and your remediation guidance?",
               "options": [
-                "Agree that these are low-priority visual issues that can be deferred to the next redesign cycle",
-                "Explain that missing landmarks deprive screen reader users of the ability to navigate the page by region — a primary navigation strategy — and that illogical heading hierarchy breaks the document outline that assistive technology users rely on to scan and understand page structure, making these structural failures with significant usability impact",
-                "Flag only the heading structure issue as a WCAG violation and note that ARIA landmarks are best practice but not required for AA conformance",
-                "Recommend adding a skip-navigation link as a sufficient substitute for landmark regions"
+                "The application lacks ARIA landmark regions — replacing structural divs with nav, main, header, and footer HTML5 elements, or adding role='navigation', role='main' etc., will expose landmarks to screen readers and enable efficient region navigation via assistive technology shortcuts",
+                "The root cause is missing skip links — adding a 'skip to main content' anchor at the top of each page will resolve the navigation inefficiency without requiring structural changes",
+                "CSS class names are not exposed to the accessibility tree, so the fix is to add aria-label attributes to each div to give screen readers descriptive text for each section",
+                "The issue is likely a screen reader configuration problem, since modern browsers map div elements with semantic class names to the accessibility tree in most cases"
               ],
-              "correctIndex": 1,
-              "explanation": "Landmark regions and logical heading structure are primary navigation mechanisms for screen reader users, not cosmetic enhancements — their absence forces linear reading of entire pages and is a genuine barrier that a consultant must characterize accurately to motivate remediation."
+              "correctIndex": 0,
+              "explanation": "Landmark regions — exposed through HTML5 sectioning elements or explicit ARIA landmark roles — are the mechanism screen reader users rely on for page-level navigation; CSS classes have no accessibility tree presence, making semantic structure the correct remediation target."
             },
             {
-              "question": "You're reviewing a nonprofit's volunteer application form and notice that required field indicators use only an asterisk (*) in the label text, with no programmatic association between the asterisk's meaning and the field, and no aria-required or required attribute on the inputs. A developer says screen readers will 'read the asterisk anyway.' How do you respond?",
+              "question": "During a code review for a nonprofit client, you find a custom autocomplete search widget that uses aria-live='assertive' to announce every keystroke result update. Beta testers with screen readers report the experience as disruptive and unusable. What is the ARIA misuse and how do you correct it?",
               "options": [
-                "Agree — if the asterisk is in the visible label text, screen readers will announce it and users will understand its meaning",
-                "Explain that while some screen readers may announce the asterisk character, its meaning is conveyed only visually through convention; the required state must be programmatically exposed via aria-required or the native required attribute so assistive technologies can surface it through accessibility APIs independently of how label text is worded",
-                "Recommend replacing the asterisk with the word 'required' in all label text, which fully resolves the programmatic requirement",
-                "Flag this only as a WCAG 3.3.2 Labels or Instructions issue and note it does not affect the accessible name computation"
+                "aria-live='assertive' interrupts the screen reader immediately for every update, which is appropriate only for critical alerts — replace with aria-live='polite' so result announcements queue after the user's current reading context, and consider debouncing announcements to fire only when results stabilize",
+                "The problem is that aria-live regions should not be used on search widgets at all — implement the ARIA combobox pattern with aria-expanded and aria-activedescendant instead, which handles result announcement natively",
+                "Reduce the frequency of DOM updates driving the live region so the assertive announcements occur less often, preserving the immediate interrupt behavior for accessibility",
+                "Switch to role='status' on the results container, which is equivalent to aria-live='assertive' but better supported across NVDA, JAWS, and VoiceOver"
               ],
-              "correctIndex": 1,
-              "explanation": "Programmatic exposure of required state via aria-required or native required attributes is necessary because it surfaces the field's state through the accessibility API — enabling AT to announce it in context-appropriate ways — rather than relying on users to interpret a visual convention embedded in label text."
+              "correctIndex": 0,
+              "explanation": "aria-live='assertive' is designed for urgent, time-sensitive alerts — applying it to incremental search results creates constant interruptions that make the widget unusable; aria-live='polite' respects the user's current reading flow and is the correct live region value for non-critical dynamic content updates."
             }
           ]
         },
@@ -605,37 +609,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A nonprofit client asks you to run an automated accessibility scan and provide the results as their official audit. You know automated tools catch roughly 30–40% of WCAG issues. How do you structure your response and your engagement?",
+              "question": "You deliver an automated audit report to a nonprofit client showing 14 accessibility violations, and their communications director responds: 'Great, we fixed all 14 — are we now accessible?' How do you set accurate expectations about audit completeness?",
               "options": [
-                "Run the automated scan and deliver the report, noting in a footnote that manual testing was not included",
-                "Decline to use automated tools since they produce false positives that undermine client trust",
-                "Explain that automated scanning is a necessary but insufficient audit component — it efficiently surfaces deterministic issues like missing alt attributes and contrast ratios, but cannot evaluate focus order logic, screen reader announcement quality, or cognitive usability — and propose a methodology that combines automated scanning for breadth with structured manual and assistive technology testing for depth",
-                "Recommend the client purchase a continuous integration accessibility testing subscription as a substitute for a formal audit"
+                "Explain that automated tools reliably detect only 20–30% of WCAG issues — issues like keyboard navigation order, screen reader announcement quality, cognitive load, and focus management require manual testing and assistive technology evaluation to surface",
+                "Confirm that resolving all automated findings brings the site to WCAG AA conformance, since automated tools are calibrated to the full AA success criteria set",
+                "Recommend running a second automated scan with a different tool to cross-validate findings before concluding the remediation phase is complete",
+                "Explain that automated audits cover all perceivable and operable criteria but that understandable and robust criteria require manual review to fully evaluate"
               ],
-              "correctIndex": 2,
-              "explanation": "Positioning automated tools accurately — as efficient triage for deterministic issues, not as a complete audit — protects your professional credibility and produces more defensible findings, which is the core service differentiator described in this module."
+              "correctIndex": 0,
+              "explanation": "Automated tools are powerful for detecting specific, deterministic issues like missing alt attributes or contrast ratios, but the majority of WCAG failures — particularly those involving interaction, semantics, and assistive technology behavior — require human evaluation; overstating automated coverage is a credibility risk for any consulting practice."
             },
             {
-              "question": "During an audit, your contrast checker shows a nonprofit's brand blue on white at a 3.8:1 ratio. The designer argues it passes because it's used for large decorative headings. How do you evaluate this claim against WCAG standards?",
+              "question": "A nonprofit client asks you to evaluate two competing color palette options for their redesigned donation page. Palette A passes WCAG 2.1 AA contrast for normal text but fails for UI component boundaries. Palette B passes AA for all text and components but fails AAA for normal text. Which palette do you recommend and on what basis?",
               "options": [
-                "Accept the argument — decorative text is explicitly exempt from all contrast requirements under WCAG 1.4.3",
-                "Evaluate whether the text meets WCAG's definition of 'large text' (18pt regular or 14pt bold) and is purely decorative with no informational purpose; if it is large text conveying content, 3:1 is the correct AA threshold and 3.8:1 passes, but if it is normal-weight text below the large-text threshold, it fails the 4.5:1 AA requirement",
-                "Require the client to meet the AAA threshold of 7:1 for all headings regardless of size, since headings are high-importance content",
-                "Flag it as a failure because WCAG contrast requirements apply uniformly to all text regardless of size or decorative intent"
+                "Recommend Palette B — WCAG 2.1 AA compliance requires 3:1 contrast for UI components and graphical objects in addition to text, making Palette A non-conformant at the required level regardless of its text performance, while Palette B meets all AA thresholds",
+                "Recommend Palette A because text contrast is the primary accessibility concern for donation forms, and UI component contrast is an enhanced criterion that applies only at AAA",
+                "Recommend Palette B only if the client has explicitly committed to AAA conformance in their accessibility statement, otherwise both palettes have tradeoffs that must be disclosed",
+                "Request a third option that achieves AAA for both text and components, since a donation page is a critical user journey that warrants the highest conformance level"
               ],
-              "correctIndex": 1,
-              "explanation": "WCAG 1.4.3 applies different contrast thresholds based on text size — 3:1 for large text, 4.5:1 for normal text — and exempts genuinely decorative text with no informational function; accurate application of these distinctions requires knowing both the pixel/point size definitions and the decorative exemption criteria."
+              "correctIndex": 0,
+              "explanation": "WCAG 2.1 Success Criterion 1.4.11 (Non-text Contrast) is a Level AA requirement — UI component boundaries must meet 3:1 contrast, making Palette A non-conformant at the standard compliance level consultants are typically engaged to achieve."
             },
             {
-              "question": "A nonprofit's video team asks you to review their new program impact video before publication. The video has open captions burned in, but no audio description. The content director says the visuals are 'self-explanatory.' How do you assess and advise?",
+              "question": "You're scoping an accessibility audit for a nonprofit that hosts 200+ hours of archived program video with no captions. The client wants to know which tool in your audit workflow validates their existing WebVTT caption files for correctness before they invest in retroactive captioning. How do you frame tool selection and its limits in your audit plan?",
               "options": [
-                "Approve the video since open captions satisfy WCAG 1.2.2 and self-explanatory visuals are an accepted exemption",
-                "Evaluate whether the video's visual content conveys information not available in the audio track; if it does — such as on-screen text, significant action, or data visualizations — WCAG 1.2.5 requires audio description at AA conformance, and 'self-explanatory' is not a defined exemption; recommend a descriptive audio track or extended description",
-                "Flag only the open caption format as a failure since WCAG requires closed captions to allow user control, and defer audio description as a AAA requirement",
-                "Advise the team that audio description is only required for live video content under WCAG 1.2.4 and that pre-recorded video is exempt at AA level"
+                "Use a WebVTT validator to detect syntax errors and timing issues in existing files, but note that technical validity does not guarantee caption quality — accuracy, speaker identification, and sound description require human review against the audio, and live event content needs a separate captioning workflow assessment",
+                "Recommend running automated accessibility scan tools across the video pages, which will flag missing track elements and invalid caption file references as WCAG 1.2 failures",
+                "Explain that WebVTT validation is outside standard WCAG audit scope and should be handled by the video production team rather than included in the accessibility audit deliverable",
+                "Use the browser developer tools media panel to preview caption rendering, which provides sufficient quality assurance for a first-pass audit without specialized validation tooling"
               ],
-              "correctIndex": 1,
-              "explanation": "WCAG 1.2.5 requires audio description for pre-recorded video at AA level when visual content conveys information absent from the audio; 'self-explanatory' is a subjective claim that must be tested against the standard's actual criterion, not accepted as an exemption."
+              "correctIndex": 0,
+              "explanation": "A WebVTT validator addresses file-level syntax correctness, but caption accessibility under WCAG 1.2 requires human evaluation of accuracy, completeness, and meaningful description — distinguishing tool scope from quality judgment is exactly the kind of audit framing that builds consulting credibility."
             }
           ]
         },
@@ -692,37 +696,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A nonprofit communications manager shows you their image library policy: all photos get alt text that reads 'Photo of [subject].' You need to coach them toward better practice without overwhelming a non-technical team. What principle do you apply and how do you frame it?",
+              "question": "A nonprofit's communications team asks you to review their image alt text practice. Their current approach is to describe every image literally and in full detail. You notice a decorative divider graphic has the alt text 'Blue wavy line used as a section divider between paragraphs.' What guidance do you give and why does it matter beyond compliance?",
               "options": [
-                "Approve the policy since any alt text is better than missing alt text, and the team can refine it later",
-                "Replace the policy with a requirement that all alt text must be under 125 characters to comply with screen reader limits",
-                "Reframe alt text as purposeful image description: the goal is to transfer the informational or emotional content the image conveys in context, not to label its existence — 'Photo of' is redundant because screen readers already announce images; instead, coach the team to ask what a sighted reader would take from the image and write that, or to use empty alt text for purely decorative images",
-                "Require the team to add both alt text and a visible caption for every image to ensure redundancy across all user types"
+                "Decorative images should have empty alt attributes (alt='') so screen readers skip them entirely — verbose alt text on decorative elements degrades the reading experience by injecting meaningless noise, and word economy in descriptions is as important as accuracy for users relying on audio rendering",
+                "The alt text is acceptable since it accurately describes the image; best practice is to err toward description rather than omission to avoid potential WCAG 1.1.1 violations",
+                "Recommend shortening to 'Decorative divider' to reduce verbosity while maintaining the accessible name for users who may encounter it via screen reader",
+                "Suggest moving the decorative image to CSS as a background image, which removes the need for any alt text decision and is always the preferred pattern"
               ],
-              "correctIndex": 2,
-              "explanation": "Effective alt text transfers the image's meaning in context, not its existence as a photo; coaching around the question 'what would a sighted user take from this?' builds durable judgment, and clarifying the decorative image (empty alt) convention prevents over-description that burdens screen reader users."
+              "correctIndex": 0,
+              "explanation": "WCAG 1.1.1 explicitly permits empty alt for decorative images, and the craft dimension of alt text — drawing on the module's framing of alt text as writing practice — requires knowing when silence is the right choice; unnecessary descriptions burden screen reader users with content that adds no meaning."
             },
             {
-              "question": "A nonprofit client wants to host a live fundraising event streamed online and asks whether captions are required and, if so, what approach you recommend. How do you advise them?",
+              "question": "A nonprofit client is launching a fundraising campaign video with no audio description. Their video producer says the narrator already describes most of the visuals in the voiceover. As a consultant, how do you evaluate whether audio description is actually required?",
               "options": [
-                "Advise that captions are only required for pre-recorded video under WCAG 1.2.2 and that live events have no legal or WCAG obligation",
-                "Recommend they add auto-generated captions from their streaming platform and note that accuracy is a secondary concern for live events",
-                "Explain that WCAG 1.2.4 requires captions for live audio content in synchronized media at AA conformance, and that auto-generated captions from streaming platforms typically fall short of the accuracy, speaker identification, and synchronization quality required; recommend professional live captioning (CART) or a vetted captioning service, noting the brand, legal liability, and reach arguments that make this a sound investment beyond pure compliance",
-                "Advise them that live captioning is a AAA requirement and therefore out of scope for a standard accessibility consultation"
+                "Assess whether all meaningful visual information — text overlays, on-screen actions, facial expressions conveying emotion, and graphic elements — is conveyed by the existing audio; if any visual content necessary to understand the video is absent from the narration, audio description is required under WCAG 1.2.5 (AA) for prerecorded video",
+                "Audio description is only required under WCAG 1.2.3, which is Level A — since the client is targeting AA conformance, audio description for prerecorded content is optional if the narrator covers key visuals",
+                "If the video has synchronized captions, audio description is not required because captions provide an equivalent text alternative for users who cannot perceive the video",
+                "Recommend submitting the video to an automated audio description tool to scan the narration transcript against the visual timeline and flag gaps requiring description"
               ],
-              "correctIndex": 2,
-              "explanation": "WCAG 1.2.4 (Captions Live) is an AA success criterion, not AAA; live auto-captions rarely meet accuracy standards for professional communications, and framing the recommendation around reach, brand, and liability — not just compliance — is the consulting-level approach."
+              "correctIndex": 0,
+              "explanation": "WCAG 1.2.5 requires audio description for all prerecorded video where the existing soundtrack doesn't fully convey visual content — the test is completeness of information transfer, not whether a narrator is present, and a consultant who can apply that test credibly distinguishes themselves from checklist-only practitioners."
             },
             {
-              "question": "A nonprofit's graphic designer argues that adding audio description to their advocacy videos will 'ruin the pacing and feel of the content.' How do you address the creative tension while maintaining the accessibility requirement?",
+              "question": "During a strategy session, a nonprofit's marketing director asks why they should invest in closed captions for their social media videos when auto-captions are already generated by the platform. How do you make the case using both accessibility and business rationale?",
               "options": [
-                "Agree to waive audio description to preserve creative integrity, since WCAG allows exceptions for artistic works",
-                "Require verbatim compliance with WCAG 1.2.5 and inform the designer that aesthetic concerns are secondary to legal requirements",
-                "Acknowledge the creative tension as legitimate, then introduce extended audio description (WCAG 1.2.7) as an option that preserves the original cut while adding a separate accessible version, and explore whether thoughtful description written as craft — not afterthought narration — can be integrated into planning rather than retrofitted, which often produces better creative and accessible outcomes simultaneously",
-                "Recommend the client add a text transcript as a substitute for audio description since transcripts convey equivalent information with no impact on video pacing"
+                "Auto-captions have significant accuracy errors — particularly for proper nouns, technical terms, and accented speakers common in nonprofit communications — which creates legal liability, erodes brand credibility, and fails users who rely on captions for comprehension; accurate closed captions also improve SEO indexing and expand reach to the 85% of social video watched without sound",
+                "Auto-captions are sufficient for WCAG compliance since the standard requires captions to be present, not to meet a specific accuracy threshold, so the investment case is primarily a brand preference decision",
+                "Closed captions are only legally required for video hosted on the organization's own website; social media platforms assume captioning responsibility for content published through their interfaces",
+                "Recommend open captions burned into the video as the most accessible option, since they eliminate any dependency on platform caption rendering behavior"
               ],
-              "correctIndex": 2,
-              "explanation": "Extended audio description (pausing video to insert description) is a WCAG 1.2.7 mechanism that resolves the pacing objection, and reframing description as a craft decision made during production — rather than a retrofit — converts an adversarial dynamic into a creative collaboration."
+              "correctIndex": 0,
+              "explanation": "The module frames captions as a convergence of accessibility compliance, legal risk, SEO value, and audience reach — making the case on all four dimensions simultaneously is the consulting move that shifts captions from a disability accommodation to a communications strategy asset."
             }
           ]
         },
@@ -782,26 +786,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A nonprofit development team is building a React Native mobile app for client intake services and asks whether adding accessibilityLabel to every touchable component is sufficient for VoiceOver and TalkBack support. How do you respond?",
+              "question": "You're reviewing a React Native mobile app built for a nonprofit's client intake process. The development team has added accessibilityLabel to every touchable element, but users testing with iOS VoiceOver report that form field purpose is still unclear. What is the most likely gap in their implementation?",
               "options": [
-                "Confirm that accessibilityLabel on all touchable elements is the primary requirement and will satisfy both iOS VoiceOver and Android TalkBack",
-                "Explain that accessibilityLabel provides the accessible name but is insufficient alone — accessibilityRole is required to communicate what type of element it is (button, link, header), accessibilityState must convey dynamic states like selected or disabled, and together these three properties map to what screen readers need to announce interactions meaningfully to users",
-                "Advise the team to use aria-label instead of accessibilityLabel since React Native now maps aria-* properties directly and they are more standards-aligned",
-                "Recommend focusing on iOS VoiceOver support first since Android TalkBack users represent a smaller audience for nonprofit client populations"
+                "accessibilityLabel alone provides an accessible name but does not communicate the element's role or its current state — the team likely needs to also implement accessibilityRole to identify inputs as form fields and accessibilityHint to convey expected input, so VoiceOver users understand both what the control is and what action it performs",
+                "The issue is that iOS VoiceOver requires aria-label rather than accessibilityLabel in React Native — the team should migrate to aria-* properties for cross-platform compatibility",
+                "accessibilityLabel values are being overridden by the underlying native view's default label; the team should set accessible={true} explicitly on each element to ensure custom labels are applied",
+                "VoiceOver clarity issues in forms are typically caused by missing focus management — the team should implement accessibilityViewIsModal to constrain VoiceOver navigation within each form section"
               ],
-              "correctIndex": 1,
-              "explanation": "Accessible name (accessibilityLabel), role (accessibilityRole), and state (accessibilityState) form a triad that together enable screen readers to announce what something is, what it's called, and what its current condition is — omitting role or state leaves users without critical interaction context."
+              "correctIndex": 0,
+              "explanation": "An accessible name (accessibilityLabel) is only one of three properties VoiceOver uses to describe a control — role and state complete the announcement, and without accessibilityRole, users hear a label with no information about whether it is a button, text field, or toggle."
             },
             {
-              "question": "During a mobile accessibility review, you discover that a nonprofit's app updates a status message ('Your form has been submitted') dynamically without moving focus to it, and VoiceOver users are missing the confirmation entirely. What is the correct remediation?",
+              "question": "A nonprofit client's Flutter development team is preparing to release a new service-finder feature. They ask you what accessibility criteria should be on their pre-release checklist specifically for Android TalkBack users. What do you prioritize?",
               "options": [
-                "Move programmatic focus to the status message element after submission so VoiceOver announces it as part of the focus change",
-                "Display the status message as a modal dialog that traps focus until dismissed",
-                "Implement accessibilityLiveRegion with an appropriate politeness level so that VoiceOver and TalkBack automatically announce the dynamic content change without requiring a focus move, which preserves user context and avoids disruptive interruption",
-                "Add a visible confirmation screen that replaces the form view entirely so sighted and screen reader users receive the same treatment"
+                "Verify that all interactive elements have meaningful semantic labels, that accessibilityLiveRegion is configured correctly for dynamic content updates so TalkBack announces changes without requiring user-initiated focus, and that custom gestures have accessible alternatives since TalkBack's gesture set can conflict with in-app swipe interactions",
+                "Confirm that the Flutter app passes automated accessibility scanning in Android Studio, which validates TalkBack compatibility for all standard widget types without requiring device testing",
+                "Focus on color contrast and text scaling since TalkBack users have the highest rate of low vision co-occurrence, making visual accessibility the most impactful checklist category for this audience",
+                "Ensure the app requests the BIND_ACCESSIBILITY_SERVICE permission correctly so TalkBack can interface with the application's view hierarchy during navigation"
               ],
-              "correctIndex": 2,
-              "explanation": "accessibilityLiveRegion is the correct pattern for dynamic status messages that don't warrant a focus change — it signals to assistive technologies that content has updated and should be announced without disrupting the user's current location or task context."
+              "correctIndex": 0,
+              "explanation": "TalkBack-specific failures cluster around unlabeled interactive elements, live region misconfiguration that causes missed or duplicate announcements, and gesture conflicts — a release checklist anchored to these categories catches the failures that automated tools miss and that most significantly degrade the user experience."
+            },
+            {
+              "question": "A nonprofit organization wants to understand whether their mobile-first web experience meets accessibility standards for users on iOS using VoiceOver. Their team has only tested on desktop with NVDA. How do you explain the gap in their current testing approach and what do you recommend?",
+              "options": [
+                "Desktop screen reader testing with NVDA does not replicate mobile VoiceOver behavior — iOS VoiceOver uses touch-based navigation gestures, announces content in a different order based on DOM source rather than visual layout, and has distinct support characteristics for ARIA patterns; the team needs device-based testing with VoiceOver on iOS to validate the mobile experience",
+                "NVDA desktop testing is a reliable proxy for VoiceOver mobile behavior since both screen readers consume the same accessibility tree exposed by the browser's rendering engine",
+                "Recommend using browser developer tools' mobile emulation mode with NVDA, which simulates the touch interaction model and provides equivalent coverage to physical device testing",
+                "The gap is primarily in gesture support — supplement NVDA testing with a touch event simulation library to cover swipe navigation patterns that VoiceOver uses on iOS"
+              ],
+              "correctIndex": 0,
+              "explanation": "iOS VoiceOver and NVDA differ in interaction model, announcement behavior, and ARIA support characteristics — mobile accessibility testing requires actual device testing with the target platform's screen reader, and advising clients to close this gap is a direct deliverable differentiator for a consulting practice."
             }
           ]
         },
@@ -883,37 +898,37 @@
           ],
           "quizQuestions": [
             {
-              "question": "A nonprofit client asks you to evaluate a vendor's proposal that includes an accessibility overlay widget as their remediation solution, citing it as a cost-effective alternative to a full audit and redesign. How do you advise them?",
+              "question": "A nonprofit client's vendor is pitching an accessibility overlay product, claiming it will bring the organization's website into immediate WCAG 2.1 AA compliance and eliminate legal risk. The client asks for your professional assessment. What do you tell them?",
               "options": [
-                "Recommend the overlay as an acceptable interim solution while a longer-term remediation plan is developed, since it demonstrates good-faith accessibility effort",
-                "Advise the client that accessibility overlays have been publicly criticized by the practitioner community — including open letters signed by hundreds of accessibility professionals — for failing to reliably fix underlying code issues, potentially introducing new barriers, and not constituting legal safe harbor; recommend declining the proposal and investing in source-code remediation instead",
-                "Ask the vendor to provide a third-party WCAG 2.1 AA audit report for their overlay product, and approve it if they can demonstrate AA conformance",
-                "Accept the overlay only if the vendor contractually guarantees WCAG 2.1 AA conformance and indemnifies the client against ADA complaints"
+                "Overlay products are widely criticized by the accessibility practitioner community — they do not fix underlying code failures, are frequently bypassed or broken when used with real assistive technologies, and have been named in ADA litigation; recommend allocating that budget to structural remediation and genuine user testing instead",
+                "Overlays can be a reasonable interim solution while a full remediation project is scoped, provided the vendor supplies an updated VPAT showing conformance claims",
+                "The legal protection claim is accurate since overlays automatically update to track WCAG standard revisions, which removes ongoing compliance maintenance burden from the organization",
+                "Evaluate the specific overlay product against current screen reader compatibility data before advising the client, since overlay quality varies significantly across vendors"
               ],
-              "correctIndex": 1,
-              "explanation": "The practitioner community has reached strong consensus — documented in open letters and community discourse — that overlays do not reliably remediate underlying accessibility barriers and can introduce new ones; advising clients away from overlays is a core competency signal in the consulting community."
+              "correctIndex": 0,
+              "explanation": "The practitioner community consensus — documented in open letters, legal records, and screen reader compatibility testing — is that overlays fail real users and do not confer legal protection; a consultant who can cite this credibly and redirect budget toward effective remediation is providing genuine value rather than validating a harmful vendor narrative."
             },
             {
-              "question": "A nonprofit's UX researcher asks for your input on making their user research process more inclusive of disabled participants. You want to draw on current practitioner discourse. Which approach best reflects emerging best practice in accessible UX research?",
+              "question": "During a community of practice discussion, a colleague argues that CAPTCHA is acceptable on nonprofit donation forms because accessibility is addressed by offering an audio alternative. How do you respond based on current practitioner understanding?",
               "options": [
-                "Recommend recruiting disabled participants only for accessibility-specific usability studies, keeping mainstream research studies focused on the primary user base",
-                "Suggest adding a disability demographic question to screeners and offering a $10 accessibility supplement to standard participant incentives",
-                "Draw on accessible UX research practice by recommending that disability inclusion be embedded in all research recruitment — not siloed to accessibility studies — that research materials and sessions be designed for accessibility from the start (not adapted on request), that compensation be equitable and account for additional time assistive technology use may require, and that researchers examine their own assumptions about 'normal' use patterns",
-                "Advise them to partner with a disability organization to recruit participants only when research topics directly concern disability experience"
+                "Audio CAPTCHAs are notoriously unusable for users with cognitive disabilities and those using screen readers, and CAPTCHA as a pattern has well-documented accessibility failures that audio alternatives do not resolve — current best practice favors invisible bot detection methods like honeypot fields or behavioral analysis that eliminate the CAPTCHA barrier entirely",
+                "Audio CAPTCHA satisfies WCAG 1.1.1 by providing an alternative for users who cannot perceive the visual challenge, making it a compliant and professionally defensible accessibility accommodation",
+                "CAPTCHA accessibility depends on implementation — advise the client to select a CAPTCHA vendor with a current VPAT showing AA conformance before making a recommendation",
+                "The real issue is that nonprofit donation forms are exempt from CAPTCHA requirements if they use a payment processor that handles its own fraud detection"
               ],
-              "correctIndex": 2,
-              "explanation": "Current practitioner discourse frames disability inclusion in UX research as a systemic design decision — not a recruitment add-on — requiring accessible materials, equitable compensation, and researchers who understand assistive technology workflows and avoid deficit-model assumptions."
+              "correctIndex": 0,
+              "explanation": "CAPTCHA is a known accessibility failure point across disability categories — cognitive, visual, and motor — and the practitioner community has moved well past audio alternatives as a satisfactory solution; recommending elimination of the pattern rather than accommodation of it signals current, community-informed expertise."
             },
             {
-              "question": "During a consulting proposal, a nonprofit program director asks you to explain what an Accessibility Conformance Report (VPAT) is and when they should require one. How do you respond in a way that demonstrates fluency with current consulting practice?",
+              "question": "You are writing an Accessibility Conformance Report (VPAT) for a nonprofit's web application and need to document partial support for a WCAG success criterion. A colleague suggests marking it 'Supports' since the feature works for most users. What is the professional and community norm you apply?",
               "options": [
-                "Explain that a VPAT is a government-only document required under Section 508 and is not relevant to nonprofit digital procurement",
-                "Describe a VPAT as a vendor's self-assessment of how their product maps to WCAG and Section 508 criteria, and recommend requiring it from any software or platform vendor as part of procurement — noting that a completed VPAT does not guarantee conformance but creates documented accountability and gives the nonprofit a basis for negotiation and remediation expectations",
-                "Recommend the nonprofit request VPATs only from vendors serving federal contracts, since Section 508 obligations do not extend to private nonprofit procurement",
-                "Explain that VPATs are standardized third-party audit reports that certify WCAG 2.1 AA conformance and can be relied upon as legal safe harbor for procurement decisions"
+                "Mark it 'Partially Supports' and document the specific conditions under which it fails — VPATs are legal and procurement documents where overstating conformance creates liability and damages trust with institutional clients who conduct their own testing; accurate partial support documentation is a credibility signal, not a weakness",
+                "Use 'Supports' with a remarks note explaining the edge cases, since 'Partially Supports' may cause the organization to lose procurement opportunities against competitors with cleaner conformance reports",
+                "Escalate to legal counsel before marking any criterion as partially supported, since VPAT language has direct implications for ADA compliance representations",
+                "Mark 'Not Evaluated' to avoid making an inaccurate claim, which is preferable to partial support documentation when the testing evidence is incomplete"
               ],
-              "correctIndex": 1,
-              "explanation": "A VPAT is a vendor self-assessment, not a third-party certification, and fluent consultants know to communicate both its value as a procurement accountability tool and its limitation as an unverified document — helping clients use it as a starting point for vendor conversations rather than a compliance guarantee."
+              "correctIndex": 0,
+              "explanation": "VPAT accuracy is a professional integrity issue with direct legal and procurement consequences — the practitioner community norm is precise, honest documentation of partial support with specific failure conditions, which builds long-term client trust and withstands scrutiny from enterprise accessibility reviewers."
             }
           ]
         },
@@ -972,26 +987,26 @@
           ],
           "quizQuestions": [
             {
-              "question": "A prospective nonprofit client asks why they should hire you over a generalist UX consultant who also 'does accessibility.' You are preparing to sit for the IAAP CPACC exam. How do you articulate the value of formal certification in this context?",
+              "question": "A prospective nonprofit client asks why they should hire a CPACC-certified consultant rather than a UX designer who knows accessibility well. How do you articulate the credential's specific value in a consulting context?",
               "options": [
-                "Explain that CPACC certification means you have passed a government-recognized licensing exam and are legally qualified to conduct ADA compliance audits",
-                "Acknowledge that certification alone does not differentiate expertise, and focus the conversation entirely on your portfolio of past accessibility work",
-                "Explain that IAAP CPACC certification is an internationally recognized credential that validates a structured knowledge base spanning disability models, accessibility standards, and assistive technology — providing the client with an external signal of expertise that reduces their due diligence burden and signals you operate within a professional community with defined ethical and knowledge standards",
-                "Position CPACC as primarily valuable for enterprise clients and explain that smaller nonprofits should rely on your portfolio and references rather than credentials"
+                "CPACC certification demonstrates validated knowledge of disability theory, international accessibility standards, and the legal and technical landscape across domains — for a nonprofit client, it provides an external, credential-based signal of expertise that reduces due diligence burden and is recognized by enterprise and institutional funders who evaluate vendor qualifications",
+                "CPACC is primarily valuable for accessibility managers in-house and is less differentiating for consulting engagements where demonstrated audit deliverables and client references are more persuasive",
+                "The credential signals commitment to the field but has the same practical weight as WCAG familiarity, since no jurisdiction requires IAAP certification for accessibility consulting work",
+                "CPACC is most relevant for procurement contexts where federal contractors must demonstrate staff qualifications — for nonprofit clients, WAS certification is the more applicable credential since it validates technical implementation knowledge"
               ],
-              "correctIndex": 2,
-              "explanation": "IAAP credentials function as trust-shortcutting signals in client relationships — they externalize expertise validation in a field where self-proclaimed expertise is common, which is particularly valuable when building a new practice where portfolio depth is still developing."
+              "correctIndex": 0,
+              "explanation": "CPACC's value in a consulting context is precisely its function as an external credibility signal that shortens trust-building with new clients — particularly institutional funders and nonprofit boards who evaluate consultant qualifications but lack the domain expertise to assess accessibility knowledge directly."
             },
             {
-              "question": "A nonprofit asks you to design a half-day accessibility training workshop for their mixed-role team of developers, designers, and content editors. Drawing on accessible pedagogy principles from your certification preparation, how do you structure it?",
+              "question": "You're designing a half-day accessibility training workshop for a nonprofit's development team. The team lead requests that you focus on ARIA patterns and JavaScript since 'the team knows HTML.' Based on accessible pedagogy and the actual distribution of audit findings, how do you push back on this scope?",
               "options": [
-                "Deliver a single unified curriculum covering WCAG criteria, then split into role breakouts for the final 30 minutes",
-                "Structure the session around role-specific compliance checklists — one for developers, one for designers, one for editors — with no cross-role content since each group has distinct responsibilities",
-                "Open with shared foundational concepts — disability models, the cost of retrofitting, and how their roles interconnect in the accessibility supply chain — then branch into role-specific application sessions where each group practices skills relevant to their actual outputs, closing with a cross-role exercise that simulates a real project handoff to reinforce systemic thinking",
-                "Focus the full session on screen reader demonstration so all roles develop empathy through direct AT experience before learning any technical content"
+                "Redirect the scope to begin with semantic HTML foundations and landmark structure before ARIA — most real-world accessibility failures in development teams stem from incorrect use of div-based layouts and missing native semantics, not from ARIA implementation gaps, and ARIA patterns taught without that foundation tend to produce new violations rather than fixing existing ones",
+                "Accept the scope since the team's self-assessment is the best starting point for a half-day session, and ARIA and JavaScript patterns are the highest-complexity and highest-value skills for a development team to acquire",
+                "Propose splitting the session equally between HTML review and ARIA patterns, covering both to ensure no knowledge gaps remain after the training",
+                "Focus the workshop on screen reader testing with NVDA and VoiceOver so the team can empirically discover their own HTML and ARIA failures, which is more effective than instructor-led content delivery"
               ],
-              "correctIndex": 2,
-              "explanation": "Effective accessibility training for mixed teams requires shared mental models before role-specific skills, and closing with a cross-role exercise reinforces that accessibility is a systemic responsibility — not a handoff checkpoint — which is the durable behavior change a consulting engagement needs to produce."
+              "correctIndex": 0,
+              "explanation": "The first rule of ARIA — use native HTML when it exists — means that teams who reach for ARIA before mastering semantic HTML create more accessibility failures than they solve; accessible pedagogy for development teams requires correcting the foundation before layering complexity, regardless of the team's self-reported proficiency."
             }
           ]
         }
