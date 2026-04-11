@@ -63,14 +63,9 @@ export default function App() {
           onClick={() => setShowManualFallback(!showManualFallback)}
           aria-expanded={showManualFallback}
         >
-          {showManualFallback ? 'Hide' : 'Show'} failed resources
+          {showManualFallback ? 'Hide' : 'Show'} other links
         </button>
-        {showManualFallback && activeList.errors && (
-          <ManualFallback
-            errors={activeList.errors}
-            listSlug={activeList.slug}
-          />
-        )}
+        {showManualFallback && <ManualFallback />}
       </footer>
     </div>
   );

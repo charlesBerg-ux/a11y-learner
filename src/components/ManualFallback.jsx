@@ -1,102 +1,40 @@
-import { useState } from 'react';
+const OTHER_LINKS = {
+  'Reference sites': [
+    { label: 'Magenta A11y', url: 'https://www.magentaa11y.com' },
+    { label: 'Web Accessibility Survey', url: 'https://webaccessibilitysurvey.com/' },
+    { label: 'IAAP', url: 'https://www.accessibilityassociation.org/s/' },
+  ],
+  'Tutorials': [
+    { label: 'FreeCodeCamp', url: 'https://www.freecodecamp.org' },
+    { label: 'W3Schools', url: 'https://www.w3schools.com/html/' },
+  ],
+  'Companies': [
+    { label: 'TPGI', url: 'https://www.tpgi.com' },
+    { label: 'Easy Surf', url: 'https://easysurf.ca/' },
+    { label: 'Fable', url: 'https://makeitfable.com' },
+    { label: 'Deque', url: 'https://www.deque.com' },
+    { label: 'Bureau of Internet Accessibility', url: 'https://www.boia.org/' },
+  ],
+};
 
-export default function ManualFallback({ errors, listSlug }) {
-  if (!errors || !errors.failed || errors.failed.length === 0) {
-    return (
-      <section className="manual-fallback" aria-label="Failed resources">
-        <p>All resources were scraped successfully.</p>
-      </section>
-    );
-  }
-
+export default function ManualFallback() {
   return (
-    <section className="manual-fallback" aria-label="Failed resources">
-      <h2>Failed resources</h2>
-      <p>
-        {errors.failedCount} of {errors.totalUrls} resources could not be scraped automatically.
-      </p>
-
-      <ul className="failed-list">
-        {errors.failed.map((item) => (
-          <FailedResource key={item.url} item={item} listSlug={listSlug} />
-        ))}
-      </ul>
+    <section className="manual-fallback" aria-label="Other links">
+      <h2>Other links</h2>
+      {Object.entries(OTHER_LINKS).map(([category, links]) => (
+        <div key={category} className="other-links-category">
+          <h3>{category}</h3>
+          <ul className="other-links-list">
+            {links.map((link) => (
+              <li key={link.url}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
-  );
-}
-
-function FailedResource({ item, listSlug }) {
-  const [text, setText] = useState('');
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
-  const [result, setResult] = useState(null);
-
-  async function handleResummarize() {
-    if (!text.trim()) return;
-    setStatus('loading');
-
-    try {
-      const response = await fetch('/api/resummarize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          url: item.url,
-          label: item.label,
-          sectionContext: item.sectionContext,
-          pastedContent: text,
-        }),
-      });
-
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      setResult(data);
-      setStatus('success');
-    } catch (err) {
-      setStatus('error');
-      setResult({ error: err.message });
-    }
-  }
-
-  return (
-    <li className="failed-resource">
-      <div className="failed-resource-header">
-        <a href={item.url} target="_blank" rel="noopener noreferrer">
-          {item.label || item.url}
-        </a>
-        <span className="failed-status-badge">{item.status}</span>
-      </div>
-      <p className="failed-reason">{item.errorReason}</p>
-
-      {status === 'success' ? (
-        <div className="resummarize-success">
-          <p>Resource summarized successfully. Re-run the pipeline to add it to a module.</p>
-        </div>
-      ) : (
-        <div className="resummarize-form">
-          <label htmlFor={`paste-${item.url}`}>
-            Paste the page content to re-summarize:
-          </label>
-          <textarea
-            id={`paste-${item.url}`}
-            className="resummarize-textarea"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            rows={6}
-            placeholder="Paste the main content from this page..."
-          />
-          <button
-            className="resummarize-button"
-            onClick={handleResummarize}
-            disabled={status === 'loading' || !text.trim()}
-          >
-            {status === 'loading' ? 'Summarizing...' : 'Summarize'}
-          </button>
-          {status === 'error' && (
-            <p className="resummarize-error" role="alert">
-              Error: {result?.error}
-            </p>
-          )}
-        </div>
-      )}
-    </li>
   );
 }

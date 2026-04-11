@@ -640,7 +640,7 @@ footer {
   font-size: 0.875rem;
 }
 
-/* ── Manual fallback panel ────────────────────────────────────────── */
+/* ── Other links panel ─────────────────────────────────────────────── */
 
 .manual-fallback {
   margin-top: var(--space-md);
@@ -648,101 +648,40 @@ footer {
 
 .manual-fallback h2 {
   font-size: 1.125rem;
-  margin: 0 0 var(--space-sm);
-}
-
-.failed-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.failed-resource {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-}
-
-.failed-resource-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-xs);
-}
-
-.failed-resource-header a {
-  color: var(--color-primary);
-  text-decoration: none;
-  word-break: break-all;
-}
-
-.failed-status-badge {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 2px var(--space-sm);
-  border-radius: var(--radius-sm);
-  background: var(--color-error-bg);
-  color: var(--color-error);
-}
-
-.failed-reason {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
   margin: 0 0 var(--space-md);
 }
 
-.resummarize-form label {
-  display: block;
-  font-size: 0.875rem;
-  margin-bottom: var(--space-xs);
+.other-links-category h3 {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: var(--space-md) 0 var(--space-sm);
 }
 
-.resummarize-textarea {
-  display: block;
-  width: 100%;
-  min-height: 120px;
-  padding: var(--space-sm);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-family: inherit;
-  font-size: 16px; /* prevents iOS zoom */
-  resize: vertical;
-  margin-bottom: var(--space-sm);
+.other-links-category:first-child h3 {
+  margin-top: 0;
 }
 
-.resummarize-button {
-  min-height: 44px;
-  padding: var(--space-sm) var(--space-lg);
-  border: none;
-  border-radius: var(--radius-md);
-  background: var(--color-primary);
-  color: white;
-  cursor: pointer;
-  font-size: 0.875rem;
+.other-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
-.resummarize-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.other-links-list li {
+  padding: var(--space-xs) 0;
 }
 
-.resummarize-success {
-  padding: var(--space-sm);
-  background: var(--color-success-bg);
-  border-radius: var(--radius-md);
-  color: var(--color-success);
+.other-links-list a {
+  color: var(--color-primary);
+  text-decoration: none;
   font-size: 0.875rem;
 }
 
-.resummarize-error {
-  color: var(--color-error);
-  font-size: 0.8rem;
-  margin-top: var(--space-sm);
+.other-links-list a:hover {
+  text-decoration: underline;
 }
 
 /* ── Tablet breakpoint (48em ≈ 768px) ─────────────────────────────── */
